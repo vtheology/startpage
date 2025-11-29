@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head> <script type="text/javascript"> var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}}); </script>
+		<meta charset="UTF-8" />	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>Picture This: North Sea Sunset - Traveling Savage</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/favicons/site.webmanifest">
+		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#0d3c4c">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+		
+<!-- This site is optimized with the Yoast SEO plugin v13.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="The hills, sea, and sky are powerless to the blush of a setting sun. We crawl through the midnight water to mountains in the northern sea: Shetland. The ferry is a gypsy ship overflowing with musicians on their way, like me, to the Shetland Folk Festival."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Picture This: North Sea Sunset - Traveling Savage" />
+<meta property="og:description" content="The hills, sea, and sky are powerless to the blush of a setting sun. We crawl through the midnight water to mountains in the northern sea: Shetland. The ferry is a gypsy ship overflowing with musicians on their way, like me, to the Shetland Folk Festival." />
+<meta property="og:url" content="https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/" />
+<meta property="og:site_name" content="Traveling Savage" />
+<meta property="article:publisher" content="https://www.facebook.com/TravelingSavage/" />
+<meta property="article:tag" content="Nature" />
+<meta property="article:tag" content="Picture This" />
+<meta property="article:section" content="The Shetland Islands" />
+<meta property="article:published_time" content="2011-04-29T15:46:23+00:00" />
+<meta property="article:modified_time" content="2018-08-07T16:06:06+00:00" />
+<meta property="og:updated_time" content="2018-08-07T16:06:06+00:00" />
+<meta property="og:image" content="https://www.traveling-savage.com/wp-content/uploads/2011/04/North-Sea-Sunset-Featured-1024x768.jpg" />
+<meta property="og:image:secure_url" content="https://www.traveling-savage.com/wp-content/uploads/2011/04/North-Sea-Sunset-Featured-1024x768.jpg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="768" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="The hills, sea, and sky are powerless to the blush of a setting sun. We crawl through the midnight water to mountains in the northern sea: Shetland. The ferry is a gypsy ship overflowing with musicians on their way, like me, to the Shetland Folk Festival." />
+<meta name="twitter:title" content="Picture This: North Sea Sunset - Traveling Savage" />
+<meta name="twitter:site" content="@travelingsavage" />
+<meta name="twitter:image" content="https://www.traveling-savage.com/wp-content/uploads/2011/04/i-9NZ7Pn9-L-1.jpg" />
+<meta name="twitter:creator" content="@travelingsavage" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.traveling-savage.com/#organization","name":"Traveling Savage","url":"https://www.traveling-savage.com/","sameAs":["https://www.facebook.com/TravelingSavage/","https://www.instagram.com/travelingsavage/","https://twitter.com/travelingsavage"],"logo":{"@type":"ImageObject","@id":"https://www.traveling-savage.com/#logo","inLanguage":"en-US","url":"https://www.traveling-savage.com/wp-content/uploads/2018/07/Screen-Shot-2018-07-26-at-2.39.47-PM.png","width":212,"height":216,"caption":"Traveling Savage"},"image":{"@id":"https://www.traveling-savage.com/#logo"}},{"@type":"WebSite","@id":"https://www.traveling-savage.com/#website","url":"https://www.traveling-savage.com/","name":"Traveling Savage","inLanguage":"en-US","publisher":{"@id":"https://www.traveling-savage.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://www.traveling-savage.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#primaryimage","inLanguage":"en-US","url":"/wp-content/uploads/2011/04/i-9NZ7Pn9-L-1.jpg"},{"@type":"WebPage","@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#webpage","url":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/","name":"Picture This: North Sea Sunset - Traveling Savage","isPartOf":{"@id":"https://www.traveling-savage.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#primaryimage"},"datePublished":"2011-04-29T15:46:23+00:00","dateModified":"2018-08-07T16:06:06+00:00","description":"The hills, sea, and sky are powerless to the blush of a setting sun. We crawl through the midnight water to mountains in the northern sea: Shetland. The ferry is a gypsy ship overflowing with musicians on their way, like me, to the Shetland Folk Festival.","potentialAction":[{"@type":"ReadAction","target":["https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/"]}]},{"@type":"Article","@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#article","isPartOf":{"@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#webpage"},"author":{"@id":"https://www.traveling-savage.com/#/schema/person/f06823e6efce80f84b729ed427289c94"},"headline":"Picture This: North Sea Sunset","datePublished":"2011-04-29T15:46:23+00:00","dateModified":"2018-08-07T16:06:06+00:00","commentCount":"11","mainEntityOfPage":{"@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#webpage"},"publisher":{"@id":"https://www.traveling-savage.com/#organization"},"image":{"@id":"https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#primaryimage"},"keywords":"Nature,Picture This","articleSection":"The Shetland Islands","inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/#respond"]}]},{"@type":["Person"],"@id":"https://www.traveling-savage.com/#/schema/person/f06823e6efce80f84b729ed427289c94","name":"Aelyth Savage","sameAs":["Aelyth Savage"]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Traveling Savage &raquo; Picture This: North Sea Sunset Comments Feed" href="https://www.traveling-savage.com/2011/04/29/picture-this-north-sea-sunset/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=UA-11972921-1"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.10.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-11972921-1',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+							
+														parameters.send_to = monsterinsights_frontend.ua;
+							__gtagDataLayer(type, name, parameters);
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+															__gtagTracker('config', 'UA-11972921-1', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.traveling-savage.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.21"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.traveling-savage.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.21' type='text/css' media='all' />
+<link rel='stylesheet' id='live-css'  href='https://www.traveling-savage.com/wp-content/themes/savage/styles/live.css?ver=1.00' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.10.0' defer onload=''></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.traveling-savage.com","hash_tracking":"false","ua":"UA-11972921-1","v4_id":""};/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js?ver=5.2.21' defer onload=''></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.3.1/instagram.min.js?ver=5.2.21' defer onload=''></script>
+<link rel='https://api.w.org/' href='https://www.traveling-savage.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.traveling-savage.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.traveling-savage.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.traveling-savage.com/?p=4047' />
+<link rel="alternate" type="application/json+oembed" href="https://www.traveling-savage.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.traveling-savage.com%2F2011%2F04%2F29%2Fpicture-this-north-sea-sunset%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.traveling-savage.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.traveling-savage.com%2F2011%2F04%2F29%2Fpicture-this-north-sea-sunset%2F&#038;format=xml" />
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>	</head>
+	<body class="post-template-default single single-post postid-4047 single-format-standard">
+		<section id="header">
+
+	<div id="logo">
+		<a href="/">
+			<img src="https://www.traveling-savage.com/wp-content/uploads/2018/06/logo.png" alt="Traveling Savage" data-rjs="2" />		</a>
+	</div>
+
+	<nav class="navbar" id="main-navigation" role="navigation">
+		<ul id="menu-main-navigation-menu" class="nav navbar-nav">
+			<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-69"><a href="https://www.traveling-savage.com/scotland-articles/">Scotland Articles</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="https://www.traveling-savage.com/scotland-map/">Scotland Map</a></li>
+<li id="menu-item-21839" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-21839"><a href="https://www.traveling-savage.com/category/scotland-basics/">Scotland Basics</a>
+<ul class="sub-menu">
+	<li id="menu-item-21840" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21840"><a href="http://www.traveling-savage.com/tag/best-scotland/">Best of Scotland</a></li>
+	<li id="menu-item-23135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23135"><a href="http://www.traveling-savage.com/tag/know-before-you-go/">Know Before You Go</a></li>
+</ul>
+</li>
+<li id="menu-item-23136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-23136"><a href="http://www.traveling-savage.com/tag/itinerary-ideas/">Itinerary Ideas</a>
+<ul class="sub-menu">
+	<li id="menu-item-23145" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23145"><a href="https://www.traveling-savage.com/2014/03/12/scotland-itinerary-ideas-black-isle-easter-ross/">Black Isle and Easter Ross</a></li>
+	<li id="menu-item-23149" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23149"><a href="https://www.traveling-savage.com/2013/12/11/scotland-itinerary-ideas-cairngorms/">The Cairngorms National Park</a></li>
+	<li id="menu-item-23137" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23137"><a href="https://www.traveling-savage.com/2018/04/18/scotland-itinerary-ideas-caithness/">Caithness</a></li>
+	<li id="menu-item-23144" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23144"><a href="https://www.traveling-savage.com/2014/10/15/scotland-itinerary-ideas-dumfries-galloway/">Dumfries &#038; Galloway</a></li>
+	<li id="menu-item-23147" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23147"><a href="https://www.traveling-savage.com/2014/02/19/scotland-itinerary-ideas-edinburgh/">Edinburgh</a></li>
+	<li id="menu-item-23140" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23140"><a href="https://www.traveling-savage.com/2015/12/16/scotland-itinerary-ideas-kingdom-fife/">Fife</a></li>
+	<li id="menu-item-23141" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23141"><a href="https://www.traveling-savage.com/2015/12/02/scotland-itinerary-ideas-glasgow/">Glasgow</a></li>
+	<li id="menu-item-23150" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23150"><a href="https://www.traveling-savage.com/2014/01/15/scotland-itinerary-ideas-islay/">Islay</a></li>
+	<li id="menu-item-23146" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23146"><a href="https://www.traveling-savage.com/2014/03/05/scotland-itinerary-ideas-isle-mull/">The Isle of Mull</a></li>
+	<li id="menu-item-23153" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23153"><a href="https://www.traveling-savage.com/2013/12/18/scotland-itinerary-ideas-isle-skye/">The Isle of Skye</a></li>
+	<li id="menu-item-23142" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23142"><a href="https://www.traveling-savage.com/2015/11/11/scotland-itinerary-ideas-lochaber-west-highlands/">Lochaber &#038; West Highlands</a></li>
+	<li id="menu-item-23151" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23151"><a href="https://www.traveling-savage.com/2013/12/04/itinerary-ideas-orkney-islands/">The Orkney Islands</a></li>
+	<li id="menu-item-23148" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23148"><a href="https://www.traveling-savage.com/2014/02/05/scotland-itinerary-ideas-perthshire/">Perthshire</a></li>
+	<li id="menu-item-23143" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23143"><a href="https://www.traveling-savage.com/2015/03/04/scotland-itinerary-ideas-the-scottish-borders/">The Scottish Borders</a></li>
+	<li id="menu-item-23152" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23152"><a href="https://www.traveling-savage.com/2014/02/12/scotland-itinerary-ideas-the-shetland-islands/">The Shetland Islands</a></li>
+	<li id="menu-item-23138" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23138"><a href="https://www.traveling-savage.com/2018/02/07/scotland-itinerary-ideas-sutherland/">Sutherland</a></li>
+	<li id="menu-item-23139" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23139"><a href="https://www.traveling-savage.com/2016/12/21/scotland-itinerary-ideas-wester-ross/">Wester Ross</a></li>
+</ul>
+</li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-68"><a href="https://www.traveling-savage.com/plan-trip-scotland/">Plan Your Trip</a>
+<ul class="sub-menu">
+	<li id="menu-item-21323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21323"><a href="https://www.traveling-savage.com/plan-trip-scotland/itinerary-review/">Itinerary Review</a></li>
+	<li id="menu-item-21322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21322"><a href="https://www.traveling-savage.com/plan-trip-scotland/trip-consultation/">Trip Consultation</a></li>
+	<li id="menu-item-21359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21359"><a href="https://www.traveling-savage.com/plan-trip-scotland/bespoke-itinerary-trip-consultation/">Bespoke Itinerary &#038; Trip Consultation</a></li>
+	<li id="menu-item-21443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21443"><a href="https://www.traveling-savage.com/testimonials/">Testimonials</a></li>
+</ul>
+</li>
+<li id="menu-item-65" class="gold-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-65"><a href="https://www.traveling-savage.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="https://www.traveling-savage.com/contact/work-with-keith/">Work With Me</a></li>
+</ul>
+</li>
+			<li class="search-li"><a href="#" class="search-btn"><i class="far fa-fw fa-search"></i></a>
+				<div class="search-wrapper">
+	<form action="/" method="get">
+		<input type="text" placeholder="Search" name="s" value="" maxlength="30" /><i class="far fa-search"></i>
+	</form>
+</div>			</li>
+		</ul>
+	</nav>
+
+	<button type="button"  class="navbar-toggle collapsed" id="mobile-navigation-toggle">
+		<span class="sr-only">Toggle Navigation</span>
+		<span class="icon-bar one"></span>
+		<span class="icon-bar two"></span>
+		<span class="icon-bar three"></span>
+	</button>
+	<div class="clearfix"></div>
+</section>
+<nav class="navbar no-print closed" id="mobile-navigation" role="navigation">
+	<ul class="mobile-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-69"><a href="https://www.traveling-savage.com/scotland-articles/">Scotland Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="https://www.traveling-savage.com/scotland-map/">Scotland Map</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-21839"><a href="https://www.traveling-savage.com/category/scotland-basics/">Scotland Basics</a>
+<ul role="menu" class="mobile-dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21840"><a href="http://www.traveling-savage.com/tag/best-scotland/">Best of Scotland</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23135"><a href="http://www.traveling-savage.com/tag/know-before-you-go/">Know Before You Go</a></li>
+</ul>
+<i class="fa fa-angle-down toggle-dropdown"></i></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-23136"><a href="http://www.traveling-savage.com/tag/itinerary-ideas/">Itinerary Ideas</a>
+<ul role="menu" class="mobile-dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23145"><a href="https://www.traveling-savage.com/2014/03/12/scotland-itinerary-ideas-black-isle-easter-ross/">Black Isle and Easter Ross</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23149"><a href="https://www.traveling-savage.com/2013/12/11/scotland-itinerary-ideas-cairngorms/">The Cairngorms National Park</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23137"><a href="https://www.traveling-savage.com/2018/04/18/scotland-itinerary-ideas-caithness/">Caithness</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23144"><a href="https://www.traveling-savage.com/2014/10/15/scotland-itinerary-ideas-dumfries-galloway/">Dumfries &#038; Galloway</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23147"><a href="https://www.traveling-savage.com/2014/02/19/scotland-itinerary-ideas-edinburgh/">Edinburgh</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23140"><a href="https://www.traveling-savage.com/2015/12/16/scotland-itinerary-ideas-kingdom-fife/">Fife</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23141"><a href="https://www.traveling-savage.com/2015/12/02/scotland-itinerary-ideas-glasgow/">Glasgow</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23150"><a href="https://www.traveling-savage.com/2014/01/15/scotland-itinerary-ideas-islay/">Islay</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23146"><a href="https://www.traveling-savage.com/2014/03/05/scotland-itinerary-ideas-isle-mull/">The Isle of Mull</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23153"><a href="https://www.traveling-savage.com/2013/12/18/scotland-itinerary-ideas-isle-skye/">The Isle of Skye</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23142"><a href="https://www.traveling-savage.com/2015/11/11/scotland-itinerary-ideas-lochaber-west-highlands/">Lochaber &#038; West Highlands</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23151"><a href="https://www.traveling-savage.com/2013/12/04/itinerary-ideas-orkney-islands/">The Orkney Islands</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23148"><a href="https://www.traveling-savage.com/2014/02/05/scotland-itinerary-ideas-perthshire/">Perthshire</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23143"><a href="https://www.traveling-savage.com/2015/03/04/scotland-itinerary-ideas-the-scottish-borders/">The Scottish Borders</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23152"><a href="https://www.traveling-savage.com/2014/02/12/scotland-itinerary-ideas-the-shetland-islands/">The Shetland Islands</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23138"><a href="https://www.traveling-savage.com/2018/02/07/scotland-itinerary-ideas-sutherland/">Sutherland</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-23139"><a href="https://www.traveling-savage.com/2016/12/21/scotland-itinerary-ideas-wester-ross/">Wester Ross</a></li>
+</ul>
+<i class="fa fa-angle-down toggle-dropdown"></i></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-68"><a href="https://www.traveling-savage.com/plan-trip-scotland/">Plan Your Trip</a>
+<ul role="menu" class="mobile-dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21323"><a href="https://www.traveling-savage.com/plan-trip-scotland/itinerary-review/">Itinerary Review</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21322"><a href="https://www.traveling-savage.com/plan-trip-scotland/trip-consultation/">Trip Consultation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21359"><a href="https://www.traveling-savage.com/plan-trip-scotland/bespoke-itinerary-trip-consultation/">Bespoke Itinerary &#038; Trip Consultation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21443"><a href="https://www.traveling-savage.com/testimonials/">Testimonials</a></li>
+</ul>
+<i class="fa fa-angle-down toggle-dropdown"></i></li>
+<li class="gold-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-65"><a href="https://www.traveling-savage.com/contact/">Contact</a>
+<ul role="menu" class="mobile-dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="https://www.traveling-savage.com/contact/work-with-keith/">Work With Me</a></li>
+</ul>
+<i class="fa fa-angle-down toggle-dropdown"></i></li>
+		<li class="search-li">
+			<div class="search-wrapper">
+	<form action="/" method="get">
+		<input type="text" placeholder="Search" name="s" value="" maxlength="30" /><i class="far fa-search"></i>
+	</form>
+</div>		</li>
+	</ul>
+</nav>
+		
+<div id="default-page" class="page">
+	<section class="no-print lazy setup-background" id="featured" data-src="https://www.traveling-savage.com/wp-content/uploads/2011/04/North-Sea-Sunset-Featured.jpg">
+	<div class="inside-shadow"></div>
+	<div class="container">
+		<div class="featured-title">
+			<h1>Picture This: North Sea Sunset</h1>
+			<h6 class="date"><strong>April 29, 2011</strong> by <a href="https://www.traveling-savage.com/traveling-savage/">Aelyth Savage</a></h6>
+					</div>
+					<a href="/scotland-map/"><div id="map" class="lazy" data-src="https://www.traveling-savage.com/wp-content/uploads/2011/04/map-marker-13.png" ></div></a>
+			</div>
+</section>
+
+	<section id="article-section" class="wrapper white-back">
+	<!-- <progress value="0"></progress> -->
+	<div id="progress-background">
+		<div id="progress-reveal"></div>
+	</div>
+	<div class="container">
+		<article class="row blog-article">
+			<div class="col-md-12 content">
+				
+				<p style="text-align: center"><a data-lity  title="North Sea Sunset" href="https://www.traveling-savage.com/wp-content/uploads/2011/04/i-9NZ7Pn9-L-1.jpg" rel="shadowbox"><img class="aligncenter shadow_osx" title="North Sea Sunset" src="https://www.traveling-savage.com/wp-content/uploads/2011/04/i-9NZ7Pn9-L-1.jpg" alt="North Sea Sunset" width="750" height="563" /></a></p>
+<p><em>The hills, sea, and sky are powerless to the blush of a setting sun. So am I, compelled as I am to stand and stare as it changes the way things look. We crawl through the midnight water to mountains in the northern sea: Shetland. The ferry is a gypsy ship overflowing with musicians on their way, like me, to the Shetland Folk Festival. Lively sessions spring up in the bars on deck six throughout the night.</em></p>
+<p><em>The sunset is like a goodbye kiss that would hold even more power </em><em>if we didn&#8217;t know better. How many woeful pleadings for the sun to return have been forgotten in the passing eons? Later, I stagger out on to the aft deck at 4am as the sky slowly drains of black. This brightening is like the knowledge of the impending arrival of a longed-for other. The sun rise itself, her appearance in the flesh, in front of you. </em></p>
+<p><em>Warm.</em></p>
+
+							</div>
+					</article>
+	</div>
+</section>
+<section class="wrapper white-back">
+	<div class="container" style="padding: 0 15px;">
+		<div class="row article-share">
+			<div class="col-12">
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b1ed28e10808805"></script>
+						<div class="share-wrap">
+							<p class="label">Share:</p>
+							<div class="addthis_inline_share_toolbox"></div>
+						</div>
+						<div class="tag-wrap">
+							<p class="label">Tags:</p>
+							<div class="list-tags"><p><a href="https://www.traveling-savage.com/tag/nature/" rel="tag">Nature</a>, <a href="https://www.traveling-savage.com/tag/picture-this/" rel="tag">Picture This</a></p></div>
+						</div>			</div>
+		</div>
+		<div class="row article-author">
+			<div class="col-md-5">
+				<h3>Aelyth Savage</h3>			</div>
+			<div class="col-md-7">
+				<a href="https://www.traveling-savage.com/"  class="btn btn-primary">Learn More About Me</a><a href="https://www.traveling-savage.com/plan-trip-scotland/"  class="btn btn-primary">Trip-Planning Services</a>			</div>
+		</div>
+	</div>
+</section>
+<script>
+
+//Control the indicator for how much of the article we have read
+jQuery(document).ready(function($) {
+	var winHeight = $(window).height(), 
+		docHeight = $(document).height(),
+		$article = $('#article-section'),
+		$featured = $('#featured'),
+		//$progressBar = $('progress'),
+		$progressBack = $('#progress-background'),
+		$progressReveal = $('#progress-reveal'),
+		articleHeight = $article.outerHeight(),
+		max, percent, progress;
+
+
+	/* Set the max scrollable area */
+	//$progressBar.attr('max', articleHeight);
+
+	$(document).on('scroll', function(){
+		if ($(document).scrollTop() > $featured.outerHeight()) {
+			progress = $(document).scrollTop() - $featured.outerHeight();
+			
+			//we are getting the new height here since sometimes after images load the height will change from the initial height
+			articleHeight = $article.outerHeight();
+
+			//we have to get the inverse % to make our reveal bar smaller
+			percent = 100 - ((progress / articleHeight) * 100).toFixed(0);
+			
+			$progressBack.css('position', 'fixed');
+			$progressReveal.css('position', 'fixed');
+			$progressReveal.css('width', percent+'%');
+		} else {
+			$progressBack.css('position', 'absolute');
+			$progressReveal.css('position', 'absolute');
+		}
+	});
+});
+</script>
+	<section class="wrapper pure-white-back article-comments">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="comments" class="comments-area">
+			<h2 class="comments-title">Article Comments</h2>
+
+		<ol class="comment-list">
+					<li class="comment even thread-even depth-1 parent" id="comment-5260">			<div id="div-comment-5260" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn">Ken</cite>
+							<span class="date">April 29, 2011 at 10:52 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Gorgeous!  But, 4 a.m.?</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5260' data-commentid="5260" data-postid="4047" data-belowelement="div-comment-5260" data-respondelement="respond" aria-label='Reply to Ken'>Leave A Reply</a>			</div>			</div><ol class="children">
+		<li class="comment byuser comment-author-keithstewart bypostauthor odd alt depth-2" id="comment-5264">			<div id="div-comment-5264" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.traveling-savage.com' rel='external nofollow' class='url'>Keith Savage</a></cite>
+							<span class="date">April 30, 2011 at 2:58 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Just to be clear, this photo was shot at sunset. I later woke up at 4am and went on deck.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5264' data-commentid="5264" data-postid="4047" data-belowelement="div-comment-5264" data-respondelement="respond" aria-label='Reply to Keith Savage'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-5263">			<div id="div-comment-5263" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.overyonderlust.com' rel='external nofollow' class='url'>Erica</a></cite>
+							<span class="date">April 29, 2011 at 9:42 pm</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>4am?! Wow! I really love these colors. Warm would be the best possible way to describe them.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5263' data-commentid="5263" data-postid="4047" data-belowelement="div-comment-5263" data-respondelement="respond" aria-label='Reply to Erica'>Leave A Reply</a>			</div>			</div><ol class="children">
+		<li class="comment byuser comment-author-keithstewart bypostauthor odd alt depth-2" id="comment-5265">			<div id="div-comment-5265" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.traveling-savage.com' rel='external nofollow' class='url'>Keith Savage</a></cite>
+							<span class="date">April 30, 2011 at 3:01 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Hey Erica, see above. This was shot around 8pm.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5265' data-commentid="5265" data-postid="4047" data-belowelement="div-comment-5265" data-respondelement="respond" aria-label='Reply to Keith Savage'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-5272">			<div id="div-comment-5272" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.islandmomma.wordpress.com' rel='external nofollow' class='url'>islandmomma</a></cite>
+							<span class="date">April 30, 2011 at 5:07 pm</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Mind you dawn does come pretty early in the summer!  This is such a stunning photo, and of course you were lucky to have such clear skies!  Just beautiful.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5272' data-commentid="5272" data-postid="4047" data-belowelement="div-comment-5272" data-respondelement="respond" aria-label='Reply to islandmomma'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-5274">			<div id="div-comment-5274" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.manvsclock.com' rel='external nofollow' class='url'>Anthony</a></cite>
+							<span class="date">May 1, 2011 at 1:01 pm</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>I remind myself every time I see this how lucky I am to live by the North sea, Totally gorgeous!</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5274' data-commentid="5274" data-postid="4047" data-belowelement="div-comment-5274" data-respondelement="respond" aria-label='Reply to Anthony'>Leave A Reply</a>			</div>			</div><ol class="children">
+		<li class="comment byuser comment-author-keithstewart bypostauthor even depth-2" id="comment-5276">			<div id="div-comment-5276" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn">Keith Savage</cite>
+							<span class="date">May 1, 2011 at 7:07 pm</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>You are indeed lucky if you see sunsets like this often.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5276' data-commentid="5276" data-postid="4047" data-belowelement="div-comment-5276" data-respondelement="respond" aria-label='Reply to Keith Savage'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-5278">			<div id="div-comment-5278" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn">Nomadic Chick</cite>
+							<span class="date">May 1, 2011 at 11:52 pm</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Haha.. I was thinking the same.  4 a.m.  Was Keith up all night drinking whiskey?  </p>
+<p>I am continually pulled to the ocean, feeling most alive and vibrant when I&#8217;m near one.</p>
+<p>Jus a lovely shot and rapturous description.  I will continue to wait for you to announce your book deal.  No pressure. 🙂</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5278' data-commentid="5278" data-postid="4047" data-belowelement="div-comment-5278" data-respondelement="respond" aria-label='Reply to Nomadic Chick'>Leave A Reply</a>			</div>			</div><ol class="children">
+		<li class="comment byuser comment-author-keithstewart bypostauthor even depth-2" id="comment-5279">			<div id="div-comment-5279" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.traveling-savage.com' rel='external nofollow' class='url'>Keith Savage</a></cite>
+							<span class="date">May 2, 2011 at 3:06 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Do you want to be my patron? 🙂</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5279' data-commentid="5279" data-postid="4047" data-belowelement="div-comment-5279" data-respondelement="respond" aria-label='Reply to Keith Savage'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-5280">			<div id="div-comment-5280" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.avventurosa.com/blog' rel='external nofollow' class='url'>Serena</a></cite>
+							<span class="date">May 2, 2011 at 3:34 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>when i see sunshine i just feel loved. i don&#8217;t know how to explain better&#8230;</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5280' data-commentid="5280" data-postid="4047" data-belowelement="div-comment-5280" data-respondelement="respond" aria-label='Reply to Serena'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-5308">			<div id="div-comment-5308" class="comment-body">			<div class="comment-author vcard">
+				<table>
+					<tr>
+						<td>
+						</td><td><cite class="fn"><a href='http://www.cruisesurfingz.com' rel='external nofollow' class='url'>Roy | cruisesurfingz</a></cite>
+							<span class="date">May 3, 2011 at 12:56 am</span>						</td>
+					</tr>
+				</table>
+			</div>			
+	
+			<p>Stunning shot! Great reminder that I need to catch more sunsets.</p>
+	
+			<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-5308' data-commentid="5308" data-postid="4047" data-belowelement="div-comment-5308" data-respondelement="respond" aria-label='Reply to Roy | cruisesurfingz'>Leave A Reply</a>			</div>			</div></li><!-- #comment-## -->
+		</ol>
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave Me A Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2011/04/29/picture-this-north-sea-sunset/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.traveling-savage.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<div class="comment-input comment-form-author"><input id="author" placeholder="Your Name"  name="author" type="text" value="" size="30" maxlength="245" required="required"></div>
+<div class="comment-input comment-form-email"><input id="email" placeholder="Email Address" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></div>
+<div class="comment-input comment-form-url"><input id="url" name="url" placeholder="Website (Optional)" type="text" value="" size="30" maxlength="200"></div>
+<div class="comment-form-comment"><textarea id="comment" placeholder="Write your comment here..." name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit Message" /> <input type='hidden' name='comment_post_ID' value='4047' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2578a33bd8" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="219"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+ 
+			</div>
+		</div>
+	</div>
+</section></div>
+
+		<section class="wrapper no-print tan-back" id="subscribe">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<script type="text/javascript">var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});</script>
+                <div class='gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_2' ><style>#gform_wrapper_2[data-form-index="0"].gform-theme,[data-parent-form="2_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}</style><div id='gf_2' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+                            <h3 class="gform_title">Scotland's Calling!</h3>
+                            <p class='gform_description'>Subscribe and confirm your subscription to receive my posts via e-mail.</p>
+                        </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_2' id='gform_2'  action='/2011/04/29/picture-this-north-sea-sunset/#gf_2' data-formid='2' novalidate autocomplete="nope">
+                        <div class='gform-body gform_body'><ul id='gform_fields_2' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_2_1" class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible pk-gfield-wrap-type-text"  data-field-class="pk-gfield-wrap-type-text" data-js-reload="field_2_1" ><label class='gfield_label gform-field-label' for='input_2_1'>Your Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input autocomplete="nope"  placeholder="Your Name" name='input_1' id='input_2_1' type='text' value='' class='medium'    placeholder='Your Name' aria-required="true" aria-invalid="false"   /> </div></li><li id="field_2_2" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible pk-gfield-wrap-type-email"  data-field-class="pk-gfield-wrap-type-email" data-js-reload="field_2_2" ><label class='gfield_label gform-field-label' for='input_2_2'>Email Address<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input autocomplete="nope"  placeholder="Email Address" name='input_2' id='input_2_2' type='email' value='' class='medium'   placeholder='Email Address' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_2_3" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible pk-gfield-wrap-type-honeypot"  data-field-class="pk-gfield-wrap-type-honeypot" data-js-reload="field_2_3" ><label class='gfield_label gform-field-label' for='input_2_3'>Comments</label><div class='ginput_container'><input autocomplete="nope"  name='input_3' id='input_2_3' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_2_3'>This field is for validation purposes and should be left unchanged.</div></li></ul></div>
+        <div class='gform_footer top_label'> <button type='submit' id='gform_submit_button_2' class='btn btn-primary  gform_button button' value='Subscribe'  onclick='if(window["gf_submitting_2"]){return false;}  if( !jQuery("#gform_2")[0].checkValidity || jQuery("#gform_2")[0].checkValidity()){window["gf_submitting_2"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_2"]){return false;} if( !jQuery("#gform_2")[0].checkValidity || jQuery("#gform_2")[0].checkValidity()){window["gf_submitting_2"]=true;}  jQuery("#gform_2").trigger("submit",[true]); }' ><span><span>Subscribe</span></span></button> <input type='hidden' name='gform_ajax' value='form_id=2&amp;title=1&amp;description=1&amp;tabindex=0&amp;theme=legacy' />
+            <input type='hidden' class='gform_hidden' name='is_submit_2' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='2' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_2' value='WyJbXSIsImFiZDA4MGI4Y2U2YWMwZDRjODhmOGQwZDFiNTIyYTk1Il0=' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_2' id='gform_target_page_number_2' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_2' id='gform_source_page_number_2' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_2" name="ak_js" value="192"/><script>document.getElementById( "ak_js_2" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_2' id='gform_ajax_frame_2' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script type="text/javascript"> gform.initializeOnLoaded( function() {gformInitSpinner( 2, 'https://www.traveling-savage.com/wp-content/themes/savage/images/loading.svg', true );jQuery('#gform_ajax_frame_2').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_2');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_2').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_2').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_2').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_2').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_2').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_2').val();gformInitSpinner( 2, 'https://www.traveling-savage.com/wp-content/themes/savage/images/loading.svg', true );jQuery(document).trigger('gform_page_loaded', [2, current_page]);window['gf_submitting_2'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_2').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_2').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [2]);window['gf_submitting_2'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_2').text());}else{jQuery('#gform_2').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "2", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_2" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_2";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_2" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [2, current_page] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 2, currentPage: current_page } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); </script>			</div>
+		</div>
+	</div>
+</section>		<section class="wrapper no-print lazy setup-background" id="footer" data-src="https://www.traveling-savage.com/wp-content/uploads/2018/07/Footer-Glen-Clova-2.jpg">
+	<div class="overlay">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5" id="footer-logo">
+					<a href="/">
+						<img src="https://www.traveling-savage.com/wp-content/uploads/2018/06/logo.png" alt="Traveling Savage" data-rjs="2" />					</a>
+				</div>
+				<div class="col-md-7 social">
+					<a href="http://www.facebook.com/TravelingSavage/" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+
+					<a href="http://twitter.com/travelingsavage/" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+					<a href="http://www.instagram.com/travelingsavage/" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+
+					<a href="http://www.linkedin.com/profile/view?id=124380496&trk=nav_responsive_tab_profile" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+
+					<a href="mailto:tra&#118;eling&#115;&#97;&#118;age&#64;g&#109;ai&#108;&#46;co&#109;"><i class="fas fa-envelope" aria-hidden="true"></i></a>				</div>
+				<div class="col-12 copyright">
+					<p>&copy; 2025 Traveling Savage. All rights reserved.<br /><a href="https://www.traveling-savage.com/privacy-policy/">Privacy Policy</a> - <a href="https://www.traveling-savage.com/terms-of-use/">Terms of Use</a> - <a href="https://www.traveling-savage.com/powderkeg/?redirect_to=%2Fresources%2F">Resources</a></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>		<link rel='stylesheet' id='pk-fonts-css'  href='//fonts.googleapis.com/css?family=IM+Fell+English%3A400%2C400i%7COpen+Sans%3A400%2C700&#038;ver=5.2.21' type='text/css' media='all' />
+<link rel='stylesheet' id='pll-styles-css'  href='https://www.traveling-savage.com/wp-content/plugins/pk-swiss-army-knife/tools/lity/css/lity.min.css?ver=5.2.21' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/pk-swiss-army-knife/tools/lity/js/lity.min.js?ver=1' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-includes/js/comment-reply.min.js?ver=5.2.21' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/themes/savage/js/live.js?ver=1.00' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-includes/js/wp-embed.min.js?ver=5.2.21' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-includes/js/wp-sanitize.min.js?ver=5.2.21' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-includes/js/wp-a11y.min.js?ver=5.2.21' defer onload=''></script>
+<script type='text/javascript' defer='defer' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.8.14'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":0,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/www.traveling-savage.com\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.traveling-savage.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.traveling-savage.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"4b51fce4088e92abf5e0f732f0c77cf7","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.8.14' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.8.14' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=50c7bea9c2320e16728e44ae9fde5f26' defer onload=''></script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=54e7080aa7a02c83aa61fae430b9d869' defer onload=''></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"4b51fce4088e92abf5e0f732f0c77cf7"}}},"hmr_dev":"","public_path":"https:\/\/www.traveling-savage.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.traveling-savage.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=bab19fd84843dabc070e73326d787910' defer onload=''></script>
+<!--[if lt IE 9]><script src="https://www.traveling-savage.com/wp-content/themes/savage/pk/lib/html5shiv/html5shiv.js"></script><![endif]--><!--[if lt IE 9]><script src="https://www.traveling-savage.com/wp-content/themes/savage/pk/lib/selectivizr/selectivizr.min.js"></script><![endif]--><!--[if lt IE 9]><script src="https://www.traveling-savage.com/wp-content/themes/savage/pk/lib/respond/respond.js"></script><![endif]--><script type="text/javascript"> gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 2) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); </script><script type="text/javascript"> gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "2", currentPage: "1", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_2" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_2";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_2" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [2, 1] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 2, currentPage: 1 } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); </script>	</body>
+</html>

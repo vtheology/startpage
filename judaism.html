@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answering Heresies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #0b044d;
+            color: white;
+            padding: 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            height: 100vh;
+            position: relative;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-size: 24px;
+            position: sticky;
+            top: 0;
+            background-color: #0b044d;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Custom Scrollbar for Sidebar */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #1e7e34;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #f8f9fa;
+        }
+
+        #nav-menu {
+            padding-bottom: 20px;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: #0a27e4;
+            border-left-color: white;
+        }
+
+        .nav-item.active {
+            background-color: #0a27e4;
+            border-left-color: white;
+        }
+
+        .sub-menu {
+            display: none;
+            background-color: rgba(0,0,0,0.1);
+            border-left: 3px solid #ffffff;
+            margin-left: 10px;
+        }
+
+        .sub-menu.show {
+            display: block;
+        }
+
+        .sub-nav-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 14px;
+        }
+
+        .sub-nav-item:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .sub-nav-item.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        .nav-arrow {
+            float: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-arrow.expanded {
+            transform: rotate(90deg);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            margin: 20px 20px 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .welcome-section h1 {
+            color: #21099a;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: #21099a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #21099a;
+            padding-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .introduction {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #21099a;
+            border-radius: 4px;
+        }
+
+        .sources-container {
+            margin-top: 20px;
+        }
+
+        .source-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .source-title {
+            font-weight: bold;
+            color: #21099a;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        
+        .source-title.bible {
+            color: #ffd700;
+        }
+
+        .source-title.bibleot {
+            color: #ff8800 
+        }
+
+        .source-icon {
+            font-size: 18px;
+            min-width: 20px;
+        }
+
+        .source-icon.quran {
+            color: #21099a;
+        }
+
+        .source-icon.hadith {
+            color: #dc3545;
+        }
+
+        .source-icon.other {
+            color: #6c757d;
+        }
+
+        .source-icon.image {
+            color: #007bff;
+        }
+
+        .grading {
+            font-size: 14px;
+            color: #6c757d;
+            font-weight: normal;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Image Source Styles */
+        .image-container {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .source-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        /* Image size variants */
+        .source-image.small {
+            max-width: 200px;
+        }
+
+        .source-image.medium {
+            max-width: 400px;
+        }
+
+        .source-image.large {
+            max-width: 600px;
+        }
+
+        .source-image.full {
+            max-width: 100%;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .source-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Commentary Styles */
+        .commentary {
+            font-size: 16px;
+            color: #444;
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            border-radius: 4px;
+            line-height: 1.7;
+        }
+
+        /* Social Links Styles */
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .social-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+        }
+        .social-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: #ffffff;
+        }
+        .social-card .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .social-card .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .social-card .social-label { font-weight: 600; }
+        .social-card.discord .social-label { font-size: 18px; }
+        .social-card.featured { grid-column: span 2; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .main-content {
+                margin: 10px 10px 10px 10px;
+                padding: 20px;
+                order: 1;
+            }
+            .social-card.featured { grid-column: auto; }
+        }
+
+        /* Comments Styles */
+        .comments-section { margin-top: 30px; padding-top: 20px; border-top: 2px solid #e9ecef; }
+        .comments-title { font-size: 22px; color: #28a745; margin-bottom: 12px; }
+        .comment-item { padding: 12px 14px; border: 1px solid #e9ecef; border-radius: 8px; background: #fafafa; margin-bottom: 10px; }
+        .comment-header { display:flex; justify-content: space-between; align-items:center; margin-bottom: 6px; }
+        .comment-author { font-weight: 600; color: #333; }
+        .comment-date { font-size: 12px; color: #888; }
+        .comment-text { color:#444; line-height:1.6; white-space: pre-wrap; }
+        .comment-form { display:flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+        .comment-input, .comment-name { padding:10px; border:1px solid #ced4da; border-radius:6px; width:100%; }
+        .comment-submit { align-self:flex-start; background:#28a745; color:white; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; }
+        .comment-submit:hover { background:#218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <div id="nav-menu">
+                <!-- Navigation items will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="back-bar" style="margin-bottom:16px;">
+                <a href="startpage.html" class="back-link" style="display:inline-flex;align-items:center;gap:8px;background:#f1f3f5;border:1px solid #e0e0e0;color:#333;text-decoration:none;padding:8px 12px;border-radius:6px;">← Back to Start</a>
+            </div>
+            <!-- Welcome Section -->
+            <div id="welcome" class="welcome-section">
+                <h1>Welcome to this site</h1>
+                <p>Explore the different sections using the navigation menu on the left to learn about what Islam really teaches. Each section contains a different topic with Islamic sources and occasionally my commentary.</p>
+            </div>
+
+            <!-- Dynamic Content Sections -->
+            <div id="content-area">
+                <!-- Content sections will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Function to generate source URLs
+        // Function to generate source URLs
+        function generateSourceUrl(title, type, sourceUrl = null) {
+            if (type === 'quran') {
+                // Extract chapter and verse from Quran titles like "Quran 2:223"
+                const match = title.match(/(\d+):(\d+)/);
+                if (match) {
+                    const chapter = match[1];
+                    const verse = match[2];
+                    return `https://quranx.com/${chapter}.${verse}`;
+                }
+            }
+            else if (type === 'hadith') {
+                // Common regex for hadith numbers with optional letter suffix
+                const match = title.match(/(\d+[a-z]?)/i);
+
+                if (title.toLowerCase().includes('bukhari') && match) {
+                    return `https://sunnah.com/bukhari:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('muslim') && match) {
+                    return `https://sunnah.com/muslim:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('nasa') && match) {
+                    return `https://sunnah.com/nasai:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('dawud') && match) {
+                    return `https://sunnah.com/abudawud:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('majah') && match) {
+                    return `https://sunnah.com/ibnmajah:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('at-tirmidhi') && match) {
+                    return `https://sunnah.com/tirmidhi:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('al-mufrad') && match) {
+                    return `https://sunnah.com/adab:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('as-salihin') && match) {
+                    return `https://sunnah.com/riyadussalihin:${match[1]}`;
+                }
+            }
+            else if (type === 'other' && sourceUrl) {
+                // Use the provided source URL for "other" type sources
+                return sourceUrl;
+            }
+            
+            // Default fallback for all other sources
+            return 'https://islam.com';
+        }
+
+
+        // Function to convert Markdown-style links to HTML
+        function parseMarkdownLinks(text) {
+            // Convert [text](url) to <a href="url" target="_blank">text</a>
+            return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+        }
+
+        // Content Database - Easy to modify and add new sections
+        const contentDatabase = {
+            "about": {
+                title: "About Me",
+                subTopics: {
+                    "mission": {
+                        title: "My Mission",
+                        introduction: "My mission is to expose errors and falsities in popular heretical sects such as: Islam, Modern Judaism, Mormonism, Unitarianism, Jehovas witnesses, and more.",
+                        sources: [
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                    "credits": {
+                        title: "Credits",
+                        introduction: "Written by Dav, big thanks to the following websites (that i also sometimes directly quoted from): https://www.answering-islam.org/",
+                        sources: [
+                            // {
+                            //     title: "Research Team",
+                            //     text: "Our research team consists of qualified Islamic scholars who verify all sources and ensure theological accuracy in our presentations.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Technical Team",
+                            //     text: "Our technical team works to make Islamic knowledge accessible through modern digital platforms while maintaining the integrity of the original sources.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                    "contact": {
+                        title: "Contact Me",
+                        introduction: "Contact me through the platforms below:",
+                        sources: [
+                            {
+                                title: "Discord",
+                                text: "Join the community on Discord",
+                                type: "other",
+                                source: "https://discord.gg/UhK5kXCA5h"
+                            },
+                            {
+                                title: "TikTok",
+                                text: "Follow me on TikTok",
+                                type: "other",
+                                source: "https://www.tiktok.com/@davxchrist"
+                            },
+                            {
+                                title: "Telegram",
+                                text: "Telegram channel/group",
+                                type: "other",
+                                source: ""
+                            },
+                            {
+                                title: "Twitter",
+                                text: "Follow on Twitter",
+                                type: "other",
+                                source: ""
+                            },
+                            {
+                                title: "Email",
+                                text: "Send me an email",
+                                type: "other",
+                                source: "mailto:#todo@example.com"
+                            }
+                        ]
+                    }
+                }
+            },
+                
+            "intro_judaism": {
+                title: "Judaism - A Summary",
+                subTopics: {
+                    "Judaism - A Summary": {
+                        title: "Introduction to Judaism",
+                        introduction: "Islam and the 'prophet' Muhammad in particular can be described in one word: clueless. Muhammad, over the course of his 23 year 'prophethood', had absolutely no clue what he was doing or saying. The character Muhammad is a good representation of what people in  7th century arabia believed, mixed with a pinch of interest and admiration for abrahamic belief. This exactly describes Muhammad. Perhaps we shouldn't blame him for his character and his words, but rather for his lying about being a prophet, because his beliefs were simply a reflection of what people in the 7th century thought to be true. It is also possible that he suffered from a mental illness or truly was possessed by demons. What is clear to say though: Muhammad was neither an example for all times, nor is Islam a religion for all times.",
+                        sources: [
+
+
+                            {
+                                title: "Sahih Muslim 146",
+                                text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                  
+                }
+            },
+
+
+
+            "Jesus_messiah": {
+                title: "Jesus is the Messiah",
+                subTopics: {
+                    "prophecies": {
+                        title: "Messianic Prophecies",
+                        introduction: "Islam believes women are to be extremely subordinate and obedient to their husbands and are generally seen as the inferior gender, this is both expressed in the Quran itself as well as in the authentic islamic hadiths.",
+                        sources: [
+                            
+                            
+                            {
+                                title: "Quran 2:223",
+                                text: "Your wives are a place of sowing for you, so come to your place of cultivation however you wish, and send (good deeds) ahead for yourselves.",
+                                type: "quran"
+                            },
+                            {
+                                title: "Quran 2:228",
+                                text: "And due to the wives is similar to what is expected of them, according to what is reasonable. But the men have a degree over them.</strong>",
+                                type: "quran"
+                            },
+                            {
+                                title: "Quran 4:43",
+                                text: "Men are the maintainers of women because Allah has made some of them to excel others and because they spend out of their property;",
+                                type: "quran"
+                            },
+                            {
+                                title: "Sunan Abi Dawud 2140",
+                                text: "I went to al-Hirah and saw them (the people) prostrating themselves before a satrap of theirs, so I said: The Messenger of Allah (ﷺ) has most right to have prostration made before him. When I came to the Prophet (ﷺ), I said: I went to al-Hirah and saw them prostrating themselves before a satrap of theirs, but you have most right, Messenger of Allah, to have (people) prostrating themselves before you. He said: Tell me , if you were to pass my grave, would you prostrate yourself before it? I said: No. He then said: Do not do so. If I were to command anyone to make prostration before another I would command women to prostrate themselves before their husbands, because of the special right over them given to husbands by Allah.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih al-Bukhari 5193",
+                                text: "The Prophet (ﷺ) said, If a man Invites his wife to sleep with him and she refuses to come to him, then the angels send their curses on her till morning.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih Muslim 1436c",
+                                text: "By Him in Whose Hand is my life, when a man calls his wife to his bed, and she does not respond, the One Who is in the heaven is displeased with her until he (her husband) is pleased with her.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih al-Bukhari 5192",
+                                text: "The Prophet (ﷺ) said, A woman should not fast (optional fasts) except with her husband's permission if he is at home.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sunan Ibn Majah 1853",
+                                text: "Abdullah bin Abu Awfa said “When Muadh bin Jabal came from Sham, he prostrated to the Prophet who said: 'What is this, O Muadh?' He said: 'I went to Sham and saw them prostrating to their bishops and patricians and I wanted to do that for you.' The messenger of Allah said: 'Do not do that. If I were to command anyone to prostrate to anyone other than Allah, I would have commanded women to prostrate to their husbands. By the One in Whose Hand is the soul of Muhammad! No woman can fulfill her duty towards Allah until she fulfills her duty towards her husband. If he asks her (for intimacy) even if she is on her camel saddle, she should not refuse.' ”",
+                                type: "hadith",
+                                grading: "Hasan (Good)"
+                            },
+                          
+                          
+                            {
+                                title: "Sahih al-Bukhari 5195",
+                                text: "Allah's Messenger (ﷺ) said, 'It is not lawful for a lady to fast (Nawafil) without the permission of her husband when he is at home; and she should not allow anyone to enter his house except with his permission; and if she spends of his wealth (on charitable purposes) without being ordered by him, he will get half of the reward.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sunan Abi Dawud 1723",
+                                text: "The Messenger of Allah (SWAS) as saying : A muslim woman must not make a journey of a night unless she is accompanied by a man who is within the prohibited degrees.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih al-Bukhari 1088",
+                                text: "The Prophet (p.b.u.h) said, 'It is not permissible for a woman who believes in Allah and the Last Day to travel for one day and night except with a Mahram.'",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih al-Bukhari 5246",
+                                text: "The Prophet (ﷺ) said, 'If you enter (your town) at night (after coming from a journey), do not enter upon your family till the woman whose husband was absent (from the house) shaves her pubic hair and the woman with unkempt hair, combs her hair' Allah's Messenger (ﷺ) further said, '(O Jabir!) Seek to have offspring, seek to have offspring!",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            {
+                                title: "Sahih Muslim 1453e",
+                                text: "I heard Umm Salama, the wife of Allah's Apostle (may peace be upon himy, saying to 'A'isha: By Allah, I do not like to be seen by a young boy who has passed the period of fosterage, whereupon she ('A'isha) said: Why is it so? Sahla daughter of Suhail came to Allah's Messenger (ﷺ) and said: Allah's Messenger, I swear by Allah that I see in the face of Abu Hudhaifa (the signs of disgust) on account of entering of Salim (in the house), whereupon Allah's Messenger (ﷺ) said: Suckle him. She (Sahla bint Suhail) said: He has a heard. But he (again) said: Suckle him, and it would remove what is there (expression of disgust) on the face of Abu Hudhaifa. She said: (I did that) and, by Allah, I did not see (any sign of disgust) on the face of Abu Hudhaifa.",
+                                type: "hadith",
+                                grading: "Sahih (Authentic)"
+                            },
+                            
+
+                            {
+                                title: "Al-Jalalayn commentary on 4:34",
+                                text: "Men are in charge of, they have authority over, women, disciplining them and keeping them in check, <strong>because of that with which God has preferred the one over the other, that is, because God has given them the advantage over women, in knowledge, reason, authority and otherwise,</strong> and because of what they expend, on them [the women], of their property. ",
+                                type: "other",
+                                source: "https://quranx.com/tafsirs/4.34"
+                            },
+
+
+
+
+                            {
+                                type: "commentary",
+                                text: "This shows that the woman is to obey her husband at all times and that men are generally understood to be superior to women. Men can wish for sex whenever they want and the wife cannot refuse."
+                            },
+
+                            
+                        ]
+
+                        
+                    }
+                }
+            },
+         
+        };
+
+        // Generate navigation menu
+        function generateNavigation() {
+            const navMenu = document.getElementById('nav-menu');
+            
+            Object.keys(contentDatabase).forEach(key => {
+                const navItem = document.createElement('div');
+                navItem.className = 'nav-item';
+                
+                const titleSpan = document.createElement('span');
+                titleSpan.textContent = contentDatabase[key].title;
+                
+                const arrow = document.createElement('span');
+                arrow.className = 'nav-arrow';
+                arrow.textContent = '▶';
+                
+                navItem.appendChild(titleSpan);
+                navItem.appendChild(arrow);
+                
+                navItem.onclick = () => toggleSubMenu(key);
+                
+                // Create sub-menu
+                const subMenu = document.createElement('div');
+                subMenu.className = 'sub-menu';
+                subMenu.id = `sub-${key}`;
+                
+                Object.keys(contentDatabase[key].subTopics).forEach(subKey => {
+                    const subNavItem = document.createElement('div');
+                    subNavItem.className = 'sub-nav-item';
+                    subNavItem.textContent = contentDatabase[key].subTopics[subKey].title;
+                    subNavItem.onclick = (e) => {
+                        e.stopPropagation();
+                        showContent(key, subKey);
+                    };
+                    subMenu.appendChild(subNavItem);
+                });
+                
+                navMenu.appendChild(navItem);
+                navMenu.appendChild(subMenu);
+            });
+        }
+
+        // Toggle sub-menu visibility
+        function toggleSubMenu(key) {
+            const subMenu = document.getElementById(`sub-${key}`);
+            const arrow = document.querySelector(`#nav-menu .nav-item:nth-child(${Object.keys(contentDatabase).indexOf(key) * 2 + 1}) .nav-arrow`);
+            
+            // Close all other sub-menus
+            document.querySelectorAll('.sub-menu').forEach(menu => {
+                if (menu.id !== `sub-${key}`) {
+                    menu.classList.remove('show');
+                }
+            });
+            document.querySelectorAll('.nav-arrow').forEach(arr => {
+                if (arr !== arrow) {
+                    arr.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current sub-menu
+            subMenu.classList.toggle('show');
+            arrow.classList.toggle('expanded');
+        }
+
+        // Generate content sections
+        function generateContentSections() {
+            const contentArea = document.getElementById('content-area');
+            
+            Object.keys(contentDatabase).forEach(key => {
+                Object.keys(contentDatabase[key].subTopics).forEach(subKey => {
+                    const section = document.createElement('div');
+                    section.id = `${key}-${subKey}`;
+                    section.className = 'content-section';
+                    section.dataset.threadId = `${key}-${subKey}`; // thread id for comments
+                    
+                    // Create title
+                    const title = document.createElement('h2');
+                    title.textContent = contentDatabase[key].subTopics[subKey].title;
+                    section.appendChild(title);
+                    
+                    // Create introduction
+                    const introduction = document.createElement('div');
+                    introduction.className = 'introduction';
+                    introduction.textContent = contentDatabase[key].subTopics[subKey].introduction;
+                    section.appendChild(introduction);
+                    
+                    // Create sources container
+                    const sourcesContainer = document.createElement('div');
+                    sourcesContainer.className = 'sources-container';
+                    
+                    // Add each source or commentary
+                    contentDatabase[key].subTopics[subKey].sources.forEach(item => {
+                        if (item.type === 'commentary') {
+                            // Create commentary element
+                            const commentary = document.createElement('div');
+                            commentary.className = 'commentary';
+                            commentary.innerHTML = parseMarkdownLinks(item.text);
+                            sourcesContainer.appendChild(commentary);
+                        } else {
+                            // Create source element
+                            const sourceItem = document.createElement('div');
+                            sourceItem.className = 'source-item';
+                            
+                            const sourceTitle = document.createElement('div');
+                            sourceTitle.className = 'source-title';
+                               
+                            // Add special styling for bible type
+                            if (item.type === 'bible') {
+                                sourceTitle.classList.add('bible');
+                            }
+                            if (item.type === 'bibleot') {
+                                sourceTitle.classList.add('bibleot');
+                            }
+                            // Add icon based on source type
+                            const icon = document.createElement('span');
+                            icon.className = `source-icon ${item.type}`;
+                            
+                            if (item.type === 'quran') {
+                                icon.textContent = '📖'; // Book emoji for Quran
+                            } else if (item.type === 'hadith') {
+                                icon.textContent = '📕'; // Scroll emoji for Hadith
+                            } else if (item.type === 'bible') {
+                                icon.textContent = '✝️'; // Cross emoji for Bible
+                            } else if (item.type === 'bibleot') {
+                                icon.textContent = '📘';
+                            } else if (item.type === 'image') {
+                                icon.textContent = '🖼️'; // Picture emoji for images
+                            } else if (item.type === 'other'){
+                                // If it's a social link, render with custom cards
+                                const isSocial = ['Discord','TikTok','Telegram','Twitter','Email'].includes(item.title);
+                                if (isSocial) {
+                                    // Build once per section
+                                    if (!sourcesContainer.dataset.socialBuilt) {
+                                        const socialWrap = document.createElement('div');
+                                        socialWrap.className = 'social-links';
+
+                                        const socialTitles = ['Discord','TikTok','Telegram','Twitter','Email'];
+                                        const platforms = contentDatabase[key].subTopics[subKey].sources
+                                            .filter(s => s.type === 'other' && socialTitles.includes(s.title));
+
+                                        platforms.forEach(p => {
+                                            const a = document.createElement('a');
+                                            const keyName = p.title.toLowerCase();
+                                            a.href = p.source || '#';
+                                            a.target = '_blank';
+                                            a.rel = 'noopener noreferrer';
+                                            a.className = `social-card ${keyName}${keyName==='discord' ? ' featured' : ''}`;
+
+                                            const iconSpan = document.createElement('span');
+                                            iconSpan.className = 'social-icon';
+                                            const img = document.createElement('img');
+                                            img.src = (
+                                                keyName === 'discord' ? 'discord.jpg' :
+                                                keyName === 'tiktok' ? 'tiktok.jpg' :
+                                                keyName === 'telegram' ? 'telegram.png' :
+                                                keyName === 'twitter' ? 'x.jpg' :
+                                                'gmail.png'
+                                            );
+                                            img.alt = `${p.title} icon`;
+                                            iconSpan.appendChild(img);
+
+                                            const label = document.createElement('span');
+                                            label.className = 'social-label';
+                                            label.textContent = p.title;
+
+                                            a.appendChild(iconSpan);
+                                            a.appendChild(label);
+                                              // 🔹 Custom behavior for Gmail
+                                            if (keyName === 'email') {
+                                                a.removeAttribute('href'); // remove mailto link
+                                                a.onclick = (e) => {
+                                                    e.preventDefault();
+                                                    alert("You can email me here: davxchrist333@gmail.com");
+                                                };
+                                            }
+                                            socialWrap.appendChild(a);
+                                        });
+
+                                        // Replace default source block with social cards (single block)
+                                        sourceItem.appendChild(socialWrap);
+                                        sourcesContainer.appendChild(sourceItem);
+                                        sourcesContainer.dataset.socialBuilt = '1';
+                                    }
+                                    return; // skip default rendering for social items (already handled)
+                                } else {
+                                    icon.textContent = '📙'; // Document emoji for other sources
+                                }
+                            } else {
+                                icon.textContent = '📚'
+                            }
+                            
+                            const titleText = document.createElement('a');
+                            titleText.textContent = item.title;
+                            titleText.href = generateSourceUrl(item.title, item.type, item.source);
+                            titleText.target = '_blank';
+                            titleText.style.textDecoration = 'none';
+                            titleText.style.color = 'inherit';
+                            
+                            sourceTitle.appendChild(icon);
+                            sourceTitle.appendChild(titleText);
+                            
+                            // Add grading for hadiths
+                            if (item.type === 'hadith' && item.grading) {
+                                const grading = document.createElement('div');
+                                grading.className = 'grading';
+                                grading.textContent = `Grading: ${item.grading}`;
+                                sourceTitle.appendChild(grading);
+                            }
+                            
+                            // Handle different content types
+                            if (item.type === 'image') {
+                                // Create image container
+                                const imageContainer = document.createElement('div');
+                                imageContainer.className = 'image-container';
+                                
+                                const img = document.createElement('img');
+                                img.className = 'source-image';
+                                
+                                // Add size class if specified (default to medium if not specified)
+                                const size = item.size || 'medium';
+                                img.classList.add(size);
+                                
+                                img.src = item.text; // For images, 'text' field contains the image path
+                                img.alt = item.title;
+                                
+                                imageContainer.appendChild(img);
+                                
+                                // Add caption if provided
+                                if (item.caption) {
+                                    const caption = document.createElement('div');
+                                    caption.className = 'image-caption';
+                                    caption.textContent = item.caption;
+                                    imageContainer.appendChild(caption);
+                                }
+                                
+                                sourceItem.appendChild(sourceTitle);
+                                sourceItem.appendChild(imageContainer);
+                            } else {
+                                // Regular text content
+                                const sourceText = document.createElement('div');
+                                sourceText.className = 'source-text';
+                                sourceText.innerHTML = `"${item.text}"`;
+                                
+                                sourceItem.appendChild(sourceTitle);
+                                sourceItem.appendChild(sourceText);
+                            }
+                            
+                            sourcesContainer.appendChild(sourceItem);
+                        }
+                    });
+                    
+                    section.appendChild(sourcesContainer);
+                    contentArea.appendChild(section);
+                });
+            });
+        }
+
+        // Show specific content section
+        function showContent(sectionId, subSectionId) {
+            // Hide welcome section
+            document.getElementById('welcome').style.display = 'none';
+            
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            const targetId = `${sectionId}-${subSectionId}`;
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+            
+            // Update navigation active state
+            document.querySelectorAll('.sub-nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Find and activate the clicked sub-nav item
+            const subMenu = document.getElementById(`sub-${sectionId}`);
+            if (subMenu) {
+                const subNavItems = subMenu.querySelectorAll('.sub-nav-item');
+                const subKeys = Object.keys(contentDatabase[sectionId].subTopics);
+                const targetIndex = subKeys.indexOf(subSectionId);
+                if (targetIndex >= 0 && subNavItems[targetIndex]) {
+                    subNavItems[targetIndex].classList.add('active');
+                }
+            }
+        }
+
+        // Supabase comments setup
+        const supabaseUrl = 'https://ydptajhdqhiwjlozqybl.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkcHRhamhkcWhpd2psb3pxeWJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4MDA2MTUsImV4cCI6MjA3MzM3NjYxNX0.F6ezrGuNC9UfAlb6I9wXgI6wuS1TJvDsC6BHrR5yCHQ';
+        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        const COMMENT_MAX_LENGTH = 1000; // max characters per comment
+
+        async function loadComments(threadId) {
+            const { data, error } = await supabaseClient
+                .from('comments')
+                .select('*')
+                .eq('thread_id', threadId)
+                .order('created_at', { ascending: true });
+            if (error) { console.error('Error loading comments', error); return []; }
+            return data || [];
+        }
+
+        async function postComment(threadId, authorName, content) {
+            const { error } = await supabaseClient
+                .from('comments')
+                .insert({ thread_id: threadId, author_name: authorName || null, content });
+            if (error) { throw error; }
+        }
+
+        function createCommentElement(c) {
+            const el = document.createElement('div');
+            el.className = 'comment-item';
+            const date = c.created_at ? new Date(c.created_at) : new Date();
+            el.innerHTML = `
+                <div class="comment-header">
+                    <div class="comment-author">${(c.author_name && c.author_name.trim()) ? c.author_name.replace(/[<>]/g,'') : 'Anonymous'}</div>
+                    <div class="comment-date">${date.toLocaleString()}</div>
+                </div>
+                <div class="comment-text"></div>
+            `;
+            el.querySelector('.comment-text').textContent = c.content || '';
+            return el;
+        }
+
+        const commentsChannels = {};
+        function subscribeToThread(threadId, listEl) {
+            if (commentsChannels[threadId]) return;
+            const channel = supabaseClient.channel(`comments-${threadId}`)
+                .on('postgres_changes', {
+                    event: 'INSERT',
+                    schema: 'public',
+                    table: 'comments',
+                    filter: `thread_id=eq.${threadId}`
+                }, (payload) => {
+                    const c = payload.new;
+                    listEl.appendChild(createCommentElement(c));
+                })
+                .subscribe();
+            commentsChannels[threadId] = channel;
+        }
+
+        function ensureCommentsUI(section) {
+            if (section.querySelector('.comments-section')) return;
+            const threadId = section.dataset.threadId || section.id;
+            const commentsSection = document.createElement('div');
+            commentsSection.className = 'comments-section';
+            commentsSection.innerHTML = `
+                <div class="comments-title">Comments</div>
+                <div class="comments-list"></div>
+                <form class="comment-form">
+                    <input type="text" class="comment-name" placeholder="Your name (optional)" />
+                    <textarea class="comment-input" rows="3" placeholder="Write a comment..." maxlength="1000"></textarea>
+                    <div class="comment-hint" style="font-size:12px;color:#888;margin:4px 0 8px;">Max 1000 characters</div>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            `;
+            section.appendChild(commentsSection);
+
+            const listEl = commentsSection.querySelector('.comments-list');
+            const form = commentsSection.querySelector('.comment-form');
+            const nameInput = commentsSection.querySelector('.comment-name');
+            const textInput = commentsSection.querySelector('.comment-input');
+
+            // Load existing
+            loadComments(threadId).then(comments => {
+                comments.forEach(c => listEl.appendChild(createCommentElement(c)));
+            });
+
+            // Realtime
+            subscribeToThread(threadId, listEl);
+
+            // Handle submit
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = nameInput.value.trim();
+                let text = textInput.value.trim();
+                if (!text) return;
+                if (text.length > COMMENT_MAX_LENGTH) {
+                    alert(`Comment is too long. Maximum is ${COMMENT_MAX_LENGTH} characters.`);
+                    return;
+                }
+                form.querySelector('.comment-submit').disabled = true;
+                try {
+                    await postComment(threadId, name, text);
+                    textInput.value = '';
+                } catch (err) {
+                    console.error('Failed to post comment', err);
+                    alert('Failed to post comment.');
+                } finally {
+                    form.querySelector('.comment-submit').disabled = false;
+                }
+            });
+        }
+
+        function initCommentsForAllSections() {
+            document.querySelectorAll('.content-section').forEach(section => ensureCommentsUI(section));
+        }
+
+        // Initialize the website
+        document.addEventListener('DOMContentLoaded', function() {
+            generateNavigation();
+            generateContentSections();
+            initCommentsForAllSections();
+        });
+    </script>
+</body>
+</html>

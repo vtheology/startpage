@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="testtesttest.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answering Heresy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(to bottom, #FFD700, #B8860B);
+            color: white;
+            padding: 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            height: 100vh;
+            position: relative;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-size: 24px;
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to bottom, #FFD700, #B8860B);
+            z-index: 10;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Custom Scrollbar for Sidebar */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #DAA520;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #f8f9fa;
+        }
+
+        #nav-menu {
+            padding: 10px 0 20px 0;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-left-color 0.3s ease;
+            border-left: 4px solid transparent;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-item:hover {
+            background-color: #F0E68C;
+            border-left-color: white;
+        }
+
+        .nav-item.active {
+            background-color: #DAA520;
+            border-left-color: white;
+        }
+
+        .nav-item.disclaimer {
+            background-color: #B8860B;
+        }
+
+        .nav-item.disclaimer:hover {
+            background-color: #DAA520;
+        }
+
+        .nav-item.quotes {
+            background-color: #0b3d91;
+        }
+
+        .nav-item.quotes:hover {
+            background-color: #0e4cab;
+        }
+
+        .nav-item.hadiths {
+            background-color: #a94700;
+        }
+
+        .nav-item.hadiths:hover {
+            background-color: #cc5a00;
+        }
+
+        .nav-item.jesus_messiah {
+            background-color: #b8860b;
+        }
+
+        .nav-item.jesus_messiah:hover {
+            background-color: #d4a017;
+        }
+
+        .sub-menu {
+            display: none;
+            background-color: rgba(0,0,0,0.1);
+            border-left: 3px solid #ffffff;
+            margin-left: 10px;
+        }
+
+        .sub-menu.show {
+            display: block;
+        }
+
+        .sub-nav-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 14px;
+        }
+
+        .sub-nav-item:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .sub-nav-item.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        
+
+
+        
+
+        .sub-menu.disclaimer {
+            background-color: rgba(184, 134, 11, 0.2);
+            border-left: 3px solid #ffffff;
+        }
+
+        .sub-menu.quotes {
+            background-color: rgba(11, 61, 145, 0.2);
+            border-left: 3px solid #ffffff;
+        }
+
+        .sub-nav-item.disclaimer {
+            background-color: #8f6a09;
+        }
+
+        .sub-nav-item.disclaimer:hover {
+            background-color: #a87f0b;
+        }
+
+        .sub-nav-item.disclaimer.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        .sub-nav-item.quotes {
+            background-color: #092a68;
+        }
+
+        .sub-nav-item.quotes:hover {
+            background-color: #0d3a86;
+        }
+
+        .sub-nav-item.quotes.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        .sub-menu.hadiths {
+            background-color: rgba(169, 71, 0, 0.2);
+            border-left: 3px solid #ffffff;
+        }
+
+        .sub-nav-item.hadiths {
+            background-color: #6d2f00;
+        }
+
+        .sub-nav-item.hadiths:hover {
+            background-color: #8a3b00;
+        }
+
+        .sub-nav-item.hadiths.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        .sub-menu.jesus_messiah {
+            background-color: rgba(184, 134, 11, 0.2);
+            border-left: 3px solid #ffffff;
+        }
+
+        .sub-nav-item.jesus_messiah {
+            background-color: #8f6a09;
+        }
+
+        .sub-nav-item.jesus_messiah:hover {
+            background-color: #a87f0b;
+        }
+
+        .sub-nav-item.jesus_messiah.active {
+            background-color: rgba(255,255,255,0.15);
+            font-weight: bold;
+        }
+
+        .nav-arrow {
+            float: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-arrow::before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 6px solid white;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        .nav-arrow.expanded {
+            transform: rotate(90deg);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 50px;
+            background-color: white;
+            margin: 20px 20px 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .welcome-section h1 {
+            color: #FFD700;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .introduction {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            border-left: 4px solid #FFD700;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sources-container {
+            margin-top: 20px;
+        }
+
+        .source-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .source-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .source-title {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        
+        .source-title.bible {
+            color: #ffd700;
+        }
+
+        .source-title.bibleot {
+            color: #ff8800 
+        }
+
+        .source-title.other {
+            color: #e29945
+        }
+
+        .source-icon {
+            font-size: 18px;
+            min-width: 20px;
+        }
+
+        .source-icon.quran {
+            color: #28a745;
+        }
+
+        .source-icon.hadith {
+            color: #dc3545;
+        }
+
+        .source-icon.other {
+            color: #6c757d;
+        }
+
+        .source-icon.image {
+            color: #007bff;
+        }
+
+        .grading {
+            font-size: 14px;
+            color: #6c757d;
+            font-weight: normal;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Image Source Styles */
+        .image-container {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .source-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        /* Image size variants */
+        .source-image.small {
+            max-width: 200px;
+        }
+
+        .source-image.medium {
+            max-width: 400px;
+        }
+
+        .source-image.large {
+            max-width: 600px;
+        }
+
+        .source-image.full {
+            max-width: 100%;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .source-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* colors */ 
+
+       
+        blue {
+            color: blue;
+        }
+        
+        red {
+            color: red;
+        }
+        
+        green {
+            color: green;
+        }
+
+       
+
+        purple {
+            color: purple;
+        }
+        orange {
+            color: orange
+        }
+        bblue {
+            color: rgb(123, 185, 229)
+        }
+        
+        gold {
+            color: gold
+        }
+        silver {
+            color: silver
+        }
+        iron {
+            color: rgb(0, 0, 0)
+        }
+        bronze {
+            color: orangered
+        }
+
+        brown {
+            color: brown
+        }
+
+        magenta {
+            color: magenta
+        }
+
+     
+        
+
+        /* Commentary Styles */
+        .commentary {
+            font-size: 16px;
+            color: #444;
+            margin: 25px 0;
+            padding: 25px;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            border-left: 4px solid #17a2b8;
+            border-radius: 8px;
+            line-height: 1.7;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Social Links Styles */
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .social-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+        }
+        .social-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: #ffffff;
+        }
+        .social-card .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .social-card .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .social-card .social-label { font-weight: 600; }
+        .social-card.discord .social-label { font-size: 18px; }
+        .social-card.featured { grid-column: span 2; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .main-content {
+                margin: 10px 10px 10px 10px;
+                padding: 20px;
+                order: 1;
+            }
+            .social-card.featured { grid-column: auto; }
+        }
+
+        /* Comments Styles */
+        .comments-section { margin-top: 30px; padding-top: 20px; border-top: 2px solid #e9ecef; }
+        .comments-title { font-size: 22px; color: #FFD700; margin-bottom: 12px; }
+        .comment-item { padding: 12px 14px; border: 1px solid #e9ecef; border-radius: 8px; background: #fafafa; margin-bottom: 10px; }
+        .comment-header { display:flex; justify-content: space-between; align-items:center; margin-bottom: 6px; }
+        .comment-author { font-weight: 600; color: #333; }
+        .comment-date { font-size: 12px; color: #888; }
+        .comment-text { color:#444; line-height:1.6; white-space: pre-wrap; }
+        .comment-form { display:flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+        .comment-input, .comment-name { padding:10px; border:1px solid #ced4da; border-radius:6px; width:100%; }
+        .comment-submit { align-self:flex-start; background:#FFD700; color:white; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; }
+        .comment-submit:hover { background:#F0E68C; }
+
+        /* Likes Styles */
+        .likes-section { margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef; display: flex; align-items: center; gap: 10px; }
+        .like-button { background: none; border: none; cursor: pointer; font-size: 16px; font-weight: bold; transition: transform 0.2s; }
+        .like-button:hover { transform: scale(1.1); }
+        .like-button.liked { color: #FFD700; }
+        .like-count { font-size: 16px; font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <div id="nav-menu">
+                <!-- Navigation items will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+             
+            <!-- Welcome Section -->
+            <div id="welcome" class="welcome-section">
+                <h1>Welcome</h1>
+                <p>Explore the different sections using the navigation menu on the left (or at the bottom) to learn about the Christian faith. Each section contains a different topic and my commentary. SITE NOT FINISHED</p>
+            </div>
+
+            <!-- Dynamic Content Sections -->
+            <div id="content-area">
+                <!-- Content sections will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Function to generate source URLs
+        // Function to generate source URLs
+
+        // function bibleGatewayUrlFromTitle(title) {
+        //     // Trim and normalize spaces
+        //     const s = title.trim().replace(/\s+/g, ' ');
+        //     // Match: book name (anything) + space + chapter (digits) + ":" + verse or verse-range (digits or digits-digits)
+        //     const m = s.match(/^(.+?)\s+(\d+):(\d+(?:-\d+)?)$/);
+        //     if (!m) throw new Error('Invalid title format. Expected "BookName Chapter:Verse" (e.g. "Isaiah 61:5" or "Isaiah 61:5-7").');
+
+        //     const book = m[1];           // e.g. "Isaiah" or "1 John"
+        //     const chapter = m[2];        // e.g. "61"
+        //     const versePart = m[3];      // e.g. "5" or "5-7"
+
+        //     const query = `${book} ${chapter}:${versePart}`;
+        //     const encoded = encodeURIComponent(query); // spaces -> %20, ":" -> %3A, "-" stays "-"
+        //     return `https://www.biblegateway.com/passage/?search=${encoded}&version=ESV`;
+        // }
+
+        function bibleGatewayUrl(title) {
+            const s = title.trim().replace(/\s+/g, ' ');
+
+            // Match "Book Chapter:Verse[-Verse]" or "Book Chapter"
+            const chapterVersePattern = /^(.+?)\s+(\d+):(\d+(?:-\d+)?)$/; // book, chapter, verse/verse-range
+            const chapterOnlyPattern = /^(.+?)\s+(\d+)$/;                 // book, chapter only
+
+            let query;
+
+            const chapterVerseMatch = s.match(chapterVersePattern);
+            const chapterOnlyMatch = s.match(chapterOnlyPattern);
+
+            if (chapterVerseMatch) {
+                const book = chapterVerseMatch[1];
+                const chapter = chapterVerseMatch[2];
+                const versePart = chapterVerseMatch[3];
+                query = `${book} ${chapter}:${versePart}`;
+            } else if (chapterOnlyMatch) {
+                const book = chapterOnlyMatch[1];
+                const chapter = chapterOnlyMatch[2];
+                query = `${book} ${chapter}`;
+            } else {
+                throw new Error('Invalid title format. Expected "Book Chapter" or "Book Chapter:Verse[-Verse]".');
+            }
+
+            const encoded = encodeURIComponent(query);
+            return `https://www.biblegateway.com/passage/?search=${encoded}&version=ESV`;
+            }
+
+
+        function generateSourceUrl(title, type, sourceUrl = null) {
+            if (type === 'quran') {
+                // Extract chapter and verse from Quran titles like "Quran 2:223"
+                const match = title.match(/(\d+):(\d+)/);
+                if (match) {
+                    const chapter = match[1];
+                    const verse = match[2];
+                    return `https://quranx.com/${chapter}.${verse}`;
+                }
+            }
+            else if (type === 'bibleot' || type === 'bible') {
+                // Extract chapter and verse from Quran titles like "Quran 2:223"
+                console.log(title);
+                if (title !== "") {
+                    return bibleGatewayUrl(title);
+                }
+                
+            }
+
+            else if (type === 'hadith') {
+                // Common regex for hadith numbers with optional letter suffix
+                const match = title.match(/(\d+[a-z]?)/i);
+
+                if (title.toLowerCase().includes('bukhari') && match) {
+                    return `https://sunnah.com/bukhari:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('muslim') && match) {
+                    return `https://sunnah.com/muslim:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('nasa') && match) {
+                    return `https://sunnah.com/nasai:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('dawud') && match) {
+                    return `https://sunnah.com/abudawud:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('majah') && match) {
+                    return `https://sunnah.com/ibnmajah:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('at-tirmidhi') && match) {
+                    return `https://sunnah.com/tirmidhi:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('al-mufrad') && match) {
+                    return `https://sunnah.com/adab:${match[1]}`;
+                }
+                else if (title.toLowerCase().includes('as-salihin') && match) {
+                    return `https://sunnah.com/riyadussalihin:${match[1]}`;
+                }
+
+                else if (title.toLowerCase().includes('al-masabih') && match) {
+                    return `https://sunnah.com/mishkat:${match[1]}`;
+                }
+            }
+            else if (sourceUrl) {
+                // Use the provided source URL for "other" type sources
+                return sourceUrl;
+            }
+            
+            // Default fallback for all other sources
+            return 'https://islam.com';
+        }
+
+
+        // Function to convert Markdown-style links to HTML
+        function parseMarkdownLinks(text) {
+            // Convert [text](url) to <a href="url" target="_blank">text</a>
+            return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+        }
+
+        // Content Database - Easy to modify and add new sections
+        const contentDatabase = {
+            // "about": {
+            //     title: "About Me",
+            //     subTopics: {
+            //         "mission": {
+            //             title: "My Mission",
+            //             introduction: "My mission is to expose errors and falsities in popular heretical sects such as: Islam, Modern Judaism, Mormonism, Unitarianism, Jehovas witnesses, and more.",
+            //             sources: [
+            //                 // Example of how to add an image:
+            //                 // {
+            //                 //     title: "Example Image",
+            //                 //     text: "images/example.jpg", // Path to your local image file
+            //                 //     type: "image",
+            //                 //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+            //                 //     caption: "Optional caption for the image" // Optional caption
+            //                 // },
+            //                 // {
+            //                 //     title: "Mission Statement",
+            //                 //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+            //                 //     type: "other",
+            //                 //     source: "https://islam.com"
+            //                 // },
+            //                 // {
+            //                 //     title: "Our Purpose",
+            //                 //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+            //                 //     type: "other",
+            //                 //     source: "https://islam.com"
+            //                 // }
+            //             ]
+            //         },
+            //         "credits": {
+            //             title: "Credits",
+            //             introduction: "Written by Dav, big thanks to the following websites (that i also sometimes directly quoted from): https://www.answering-islam.org/",
+            //             sources: [
+            //                 // {
+            //                 //     title: "Research Team",
+            //                 //     text: "Our research team consists of qualified Islamic scholars who verify all sources and ensure theological accuracy in our presentations.",
+            //                 //     type: "other",
+            //                 //     source: "https://islam.com"
+            //                 // },
+            //                 // {
+            //                 //     title: "Technical Team",
+            //                 //     text: "Our technical team works to make Islamic knowledge accessible through modern digital platforms while maintaining the integrity of the original sources.",
+            //                 //     type: "other",
+            //                 //     source: "https://islam.com"
+            //                 // }
+            //             ]
+            //         },
+            //         "contact": {
+            //             title: "Contact Me",
+            //             introduction: "Contact me through the platforms below:",
+            //             sources: [
+            //                 {
+            //                     title: "Discord",
+            //                     text: "Join the community on Discord",
+            //                     type: "other",
+            //                     source: "https://discord.gg/UhK5kXCA5h"
+            //                 },
+            //                 {
+            //                     title: "TikTok",
+            //                     text: "Follow me on TikTok",
+            //                     type: "other",
+            //                     source: "https://www.tiktok.com/@davxchrist"
+            //                 },
+            //                 {
+            //                     title: "Telegram",
+            //                     text: "Telegram channel/group",
+            //                     type: "other",
+            //                     source: ""
+            //                 },
+            //                 {
+            //                     title: "Twitter",
+            //                     text: "Follow on Twitter",
+            //                     type: "other",
+            //                     source: ""
+            //                 },
+            //                 {
+            //                     title: "Email",
+            //                     text: "Send me an email",
+            //                     type: "other",
+            //                     source: "mailto:#todo@example.com"
+            //                 }
+            //             ]
+            //         }
+            //     }
+            // },
+            
+            
+            // "disclaimer": {
+            //     title: "Disclaimer",
+            //     subTopics: {
+            //         "Disclaimer": {
+            //             title: "Disclaimer",
+            //             introduction: "The intention of this website is not to insult Muslims. Anything i write is not an insult to Muslims, it is an attack towards Islam. Opinions and content on this site may come from various sources and are not necessarily all my own. If you want to share your criticism regarding this site, you may email me at davxchrist333@gmail.com. ",
+                        
+                        
+            //             sources: [
+
+
+                           
+            //             ]
+            //         }
+            //     }
+            // },
+
+            
+            "intro_christianity": {
+                title: "Christianity - an Introduction",
+                subTopics: {
+                    "Christianity - an Introduction": {
+                        title: "Introduction to Christianity",
+                        introduction: "Christianity is the only true religion, that's about it",                        sources: [
+
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                  
+                }
+            },
+
+             
+            "love_and_marriage": {
+                title: "Love & Marriage",
+                subTopics: {
+                    "intro_love_and_marriage": {
+                        title: "Short Introduction",
+                        introduction: "What does Christianity teach about Love and Marriage?",                        sources: [
+                            {
+                                title: "1 Corinthians 13",
+                                type: "bible",
+                                text: "If I speak in the tongues of men and of angels, but have not love, I am a noisy gong or a clanging cymbal. And if I have prophetic powers, and understand all mysteries and all knowledge, and if I have all faith, so as to remove mountains, but have not love, I am nothing.  If I give away all I have, and if I deliver up my body to be burned, but have not love, I gain nothing. Love is patient and kind; love does not envy or boast; it is not arrogant or rude. It does not insist on its own way; it is not irritable or resentful; it does not rejoice at wrongdoing, but rejoices with the truth. Love bears all things, believes all things, hopes all things, endures all things. Love never ends. As for prophecies, they will pass away; as for tongues, they will cease; as for knowledge, it will pass away. For we know in part and we prophesy in part, but when the perfect comes, the partial will pass away. When I was a child, I spoke like a child, I thought like a child, I reasoned like a child. When I became a man, I gave up childish ways. For now we see in a mirror dimly, but then face to face. Now I know in part; then I shall know fully, even as I have been fully known. So now faith, hope, and love abide, these three; but the greatest of these is love."
+                            },
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+
+
+                    "treating_one_another": {
+                        title: "Treating one another",
+                        introduction: "How are men and women to treat each other?",                        sources: [
+                          
+                            {
+                                title: "Ephesians 5:22-33",
+                                type: "bible",
+                                text: "<magenta>Wives, <u>submit to your own husbands, as to the Lord.</u> For the husband is the head of the wife even as Christ is the head of the church, his body, and is himself its Savior. Now as the church submits to Christ, <u>so also wives should submit in everything to their husbands.</u></magenta> <blue><u>Husbands, love your wives,</u> as Christ loved the church and gave himself up for her, that he might sanctify her, having cleansed her by the washing of water with the word, so that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish. <u>In the same way husbands should love their wives <strong>as their own bodies. He who loves his wife loves himself.</strong></u> For no one ever hated his own flesh, but nourishes and cherishes it, just as Christ does the church, because we are members of his body.</blue> “Therefore a man shall leave his father and mother and hold fast to his wife, and the two shall become one flesh.” This mystery is profound, and I am saying that it refers to Christ and the church. <blue>However, <u>let each one of you <strong>love his wife as himself,</strong></u></blue> <magenta>and let the wife see that she respects her husband.</magenta>"
+                            },
+                            {
+                                type: "commentary",
+                                text: "So, wives are to submit to their husbands, that he may lead them, and men are to love their wives as themselves."
+                            },                            
+                            {
+                                title: "Colossians 3:18-20",
+                                type: "bible",
+                                text: "<magenta>Wives, submit to your husbands, as is fitting in the Lord.</magenta> <blue>Husbands, love your wives, <u>and do not be harsh with them.</u></blue> "
+                            },
+                            {
+                                type: "commentary",
+                                text: "A quick parallel to the Quran:"
+                            },
+                            {
+                                type: "quran",
+                                text: "Men are in charge of women by [right of] what Allah has given one over the other and what they spend [for maintenance] from their wealth. So righteous women are devoutly obedient, guarding in [the husband's] absence what Allah would have them guard. <blue>But those [wives] from whom you fear arrogance - [first] advise them; [then if they persist], forsake them in bed; and [finally], <u>strike them.</u></blue> But if they obey you [once more], seek no means against them. Indeed, Allah is ever Exalted and Grand.",
+                                title: "Quran 4:34"
+                            },
+                            
+                            {
+                                title: "1 Peter 3:3-7",
+                                type: "bible",
+                                text: "<magenta>Do not let your adorning be external—the braiding of hair and the putting on of gold jewelry, or the clothing you wear— but let your adorning be the hidden person of the heart with the imperishable beauty of a gentle and quiet spirit, which in God's sight is very precious. For this is how the holy women who hoped in God used to adorn themselves, by submitting to their own husbands, as Sarah obeyed Abraham, calling him lord. And you are her children, if you do good and do not fear anything that is frightening.</magenta> <blue>Likewise, husbands, live with your wives in an understanding way, showing honor to the woman as the weaker vessel, since they are heirs with you of the grace of life, so that your prayers may not be hindered.</blue>"                            },
+                            
+                                ,
+
+                            {
+                                type: "commentary",
+                                text: "('by submitting to their own husbands', this means to have a respectful and cooperative attitude, not a forced obedience or inferiority. The Greek word here for 'be subject' (hypotassō) means 'to willingly place yourself under')"
+                            },
+                              {
+
+                                title: "1 Corinthians 7:1-5",
+                                type: "bible",
+                                text: "Now concerning the matters about which you wrote: “It is good for a man not to have sexual relations with a woman.” But because of the temptation to sexual immorality, <strong>each man should have his own wife and each woman her own husband. The husband should give to his wife her conjugal rights, and likewise the wife to her husband. For the wife does not have authority over her own body, but the husband does. Likewise the husband does not have authority over his own body, but the wife does.</strong> Do not deprive one another, except perhaps by agreement for a limited time, that you may devote yourselves to prayer; but then come together again, so that Satan may not tempt you because of your lack of self-control."
+                            },
+                            // {
+
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                    "polygamy": {
+                        title: "Polygamy",
+                        introduction: "Does Christianity allow polygamy? If not, why is it present in the Old Testament?",                        sources: [
+                            {
+                                type: "commentary",
+                                text: "1. The Bible: Polygamy allowed?"
+                            },
+                            {
+                                type: "commentary",
+                                text: "The Bible is clear, one man shall be married to one woman, not more. And one woman shall be married to one man, not more:"
+                            },
+                             {
+
+                                title: "1 Corinthians 7:1-5",
+                                type: "bible",
+                                text: "Now concerning the matters about which you wrote: “It is good for a man not to have sexual relations with a woman.” But because of the temptation to sexual immorality, <strong><u>each man should have his own wife and each woman her own husband.</u></strong>"
+                             },
+                             
+                            
+                            {
+                                title: "Genesis 2:24",
+                                type: "bibleot",
+                                text: "Therefore a man shall leave his father and his mother and hold fast to his wife, and they shall become one flesh."
+                            },
+                            {
+                                type: "commentary",
+                                text: "Now you might wonder: then why was polygamy allowed in the Old Testament? The reality is, yes, it was allowed, it was tolerated, but it was never God's ideal. Jesus also tells us this:"
+                            },
+                            
+                            {
+                                title: "Matthew 19:3-9",
+                                type: "bible",
+                                text: "And Pharisees came up to him and tested him by asking, “Is it lawful to divorce one's wife for any cause?” He answered, “Have you not read that he who created them from the beginning made them male and female, <strong>and said, ‘Therefore a man shall leave his father and his mother and hold fast to his wife, and the two shall become one flesh’? <u>So they are no longer two but one flesh. What therefore God has joined together, let not man separate.”</u></strong> They said to him, “Why then did Moses command one to give a certificate of divorce and to send her away?” <strong>He said to them, <u>“Because of your hardness of heart Moses allowed you to divorce your wives, but from the beginning it was not so.</u></strong> And I say to you: whoever divorces his wife, except for sexual immorality, and marries another, commits adultery.”"
+                            },
+                            {
+                                type: "commentary",
+                                text: "Here Jesus emphasizes MONOGAMY quoting Genesis 2:24 and adding <strong>'So they are <u>no longer two</u> but one flesh. What therefore God has joined together, let not man separate.'</strong> and explained that a lot of things were allowed back then due to hardened hearts, not because it was God's ideal for humanity. That is why the new covenant came in the first place: God's perfect, ideal, and holy law, which is the covenant of the Messiah, the New Testament."
+                            },
+                            {
+                                type: "commentary",
+                                text: "Then why did many kings and prophets in the Old Testament practice polygamy? Well, during the time of anient Israel, God simply allowed and tolerated polygamy, like many others things, but he didn't support or endorse it. A description of what people were doing isn't a command or an approval of it. Further, kings who practiced polygamy in the Old Testament usually fell because of it, and it always led to jealousy and unhappiness.  Let's look at a few passages:"
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "1. Abraham, Sarah, and Hagar"
+                            },              
+                            
+                            {
+                                type: "commentary",
+                                text: "God had promised Abraham a son through Sarah, but Sarah grew impatient and gave her maid Hagar to Abraham to have a child for her, Hagar then conceived Ishmael, but tension and jealousy followed:"
+                            },
+
+                            {
+                                title: "Genesis 16:1-6",
+                                type: "bibleot",
+                                text: "Now Sarai, Abram's wife, had borne him no children. She had a female Egyptian servant whose name was Hagar. And Sarai said to Abram, “Behold now, the Lord has prevented me from bearing children. Go in to my servant; it may be that I shall obtain children by her.” And Abram listened to the voice of Sarai. So, after Abram had lived ten years in the land of Canaan, Sarai, Abram's wife, took Hagar the Egyptian, her servant, and gave her to Abram her husband as a wife. <strong>And he went in to Hagar, and she conceived. And when she saw that she had conceived, she looked with contempt on her mistress. And Sarai said to Abram, “May the wrong done to me be on you! I gave my servant to your embrace, and when she saw that she had conceived, she looked on me with contempt. May the Lord judge between you and me!” But Abram said to Sarai, “Behold, your servant is in your power; do to her as you please.” Then Sarai dealt harshly with her, and she fled from her.</strong>"
+                            },
+                            
+                            {
+                                title: "Genesis 21:8-14",
+                                type: "bibleot",
+                                text: "And the child grew and was weaned. And Abraham made a great feast on the day that Isaac was weaned. But Sarah saw the son of Hagar the Egyptian, whom she had borne to Abraham, laughing. <strong>So she said to Abraham, “Cast out this slave woman with her son, for the son of this slave woman shall not be heir with my son Isaac.” And the thing was very displeasing to Abraham on account of his son.</strong> But God said to Abraham, “Be not displeased because of the boy and because of your slave woman. Whatever Sarah says to you, do as she tells you, for through Isaac shall your offspring be named. And I will make a nation of the son of the slave woman also, because he is your offspring.” So Abraham rose early in the morning and took bread and a skin of water and gave it to Hagar, putting it on her shoulder, along with the child, and sent her away. And she departed and wandered in the wilderness of Beersheba. "
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "So the moral of the story is that polygamy causes jealousy here."
+                            },
+                            {
+                                type: "commentary",
+                                text: "2. Jacob, Leah, Rachel, Bilhah, and Zilpah"
+                            },
+                            {
+                                type: "commentary",
+                                text: "Jacob loved Rachel but was tricked into marrying her sister Leah first. Then he married Rachel as well, and later had children with their maidservants Bilhah and Zilpah. Jacob loved Rachel more than her sister Leah though, and Leah felt unloved, seeking the love of Jacob for her. Rachel and Leah then competed through childbearing, and rivalry between them arose: "
+                            },
+                            {
+                                title: "Genesis 29:27-35",
+                                type: "bible",
+                                text: "Complete the week of this one, and we will give you the other also in return for serving me another seven years.” 28 Jacob did so, and completed her week. Then Laban gave him his daughter Rachel to be his wife. (Laban gave his female servant Bilhah to his daughter Rachel to be her servant.) So Jacob went in to Rachel also, <strong>and he loved Rachel more than Leah,</strong> and served Laban for another seven years. When the Lord saw that Leah was hated, he opened her womb, but Rachel was barren. And Leah conceived and bore a son, and she called his name Reuben, for she said, <strong>“Because the Lord has looked upon my affliction; for now my husband will love me.”</strong> She conceived again and bore a son, and said, <strong>“Because the Lord has heard that I am hated, he has given me this son also.”</strong> And she called his name Simeon. Again she conceived and bore a son, and said, <strong>“Now this time my husband will be attached to me, because I have borne him three sons.”</strong> Therefore his name was called Levi. And she conceived again and bore a son, and said, “This time I will praise the Lord.” Therefore she called his name Judah. Then she ceased bearing."
+                            },
+                            
+                            
+                            {
+                                title: "Genesis 30:1-18",
+                                type: "bible",
+                                text: "<strong>When Rachel saw that she bore Jacob no children, she envied her sister. She said to Jacob, “Give me children, or I shall die!” Jacob's anger was kindled against Rachel, and he said, “Am I in the place of God, who has withheld from you the fruit of the womb?” Then she said, “Here is my servant Bilhah; go in to her, so that she may give birth on my behalf, that even I may have children through her.”</strong> So she gave him her servant Bilhah as a wife, and Jacob went in to her. And Bilhah conceived and bore Jacob a son. Then Rachel said, “God has judged me, and has also heard my voice and given me a son.” Therefore she called his name Dan. Rachel's servant Bilhah conceived again and bore Jacob a second son. <strong>Then Rachel said, “With mighty wrestlings I have wrestled with my sister and have prevailed.”</strong> So she called his name Naphtali. When Leah saw that she had ceased bearing children, she took her servant Zilpah and gave her to Jacob as a wife. Then Leah's servant Zilpah bore Jacob a son. And Leah said, “Good fortune has come!” so she called his name Gad. Leah's servant Zilpah bore Jacob a second son. And Leah said, “Happy am I! For women have called me happy.” So she called his name Asher. <strong>In the days of wheat harvest Reuben went and found mandrakes in the field and brought them to his mother Leah. Then Rachel said to Leah, “Please give me some of your son's mandrakes.” But she said to her, <u>“Is it a small matter that you have taken away my husband? Would you take away my son's mandrakes also?”</u></strong> Rachel said, “Then he may lie with you tonight in exchange for your son's mandrakes.” When Jacob came from the field in the evening, Leah went out to meet him and said, “You must come in to me, for I have hired you with my son's mandrakes.” So he lay with her that night. And God listened to Leah, and she conceived and bore Jacob a fifth son. Leah said, “God has given me my wages because I gave my servant to my husband.” So she called his name Issachar. "
+                            },
+                             {
+                                type: "commentary",
+                                text: "Again, jealousy ruined love."
+                            },
+                            {
+                                type: "commentary",
+                                text: "3. David's Many Wives"
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "David took multiple wives and then committed adultery with Bathsheba and arranged the death of her husband Uriah. God then severely punishes him:"
+                            },
+                             {
+                                title: "2 Samuel 5:13",
+                                type: "bibleot",
+                                text: "And David took more concubines and wives from Jerusalem, after he came from Hebron, and more sons and daughters were born to David."
+                            },
+                             {
+                                title: "2 Samuel 11:2-27",
+                                type: "bibleot",
+                                text: "It happened, late one afternoon, <strong>when David arose from his couch and was walking on the roof of the king's house, that he saw from the roof a woman bathing; and the woman was very beautiful. And David sent and inquired about the woman. And one said, “Is not this Bathsheba, the daughter of Eliam, the wife of Uriah the Hittite?” So David sent messengers and took her, and she came to him, and he lay with her. (Now she had been purifying herself from her uncleanness.) Then she returned to her house. And the woman conceived, and she sent and told David, “I am pregnant.”</strong> So David sent word to Joab, “Send me Uriah the Hittite.” And Joab sent Uriah to David. When Uriah came to him, David asked how Joab was doing and how the people were doing and how the war was going. Then David said to Uriah, “Go down to your house and wash your feet.” And Uriah went out of the king's house, and there followed him a present from the king. But Uriah slept at the door of the king's house with all the servants of his lord, and did not go down to his house. When they told David, “Uriah did not go down to his house,” David said to Uriah, “Have you not come from a journey? Why did you not go down to your house?” Uriah said to David, “The ark and Israel and Judah dwell in booths, and my lord Joab and the servants of my lord are camping in the open field. Shall I then go to my house, to eat and to drink and to lie with my wife? As you live, and as your soul lives, I will not do this thing.” Then David said to Uriah, “Remain here today also, and tomorrow I will send you back.” So Uriah remained in Jerusalem that day and the next. <strong>And David invited him, and he ate in his presence and drank, so that he made him drunk. And in the evening he went out to lie on his couch with the servants of his lord, but he did not go down to his house. In the morning David wrote a letter to Joab and sent it by the hand of Uriah. In the letter he wrote, “Set Uriah in the forefront of the hardest fighting, and then draw back from him, that he may be struck down, and die.” And as Joab was besieging the city, he assigned Uriah to the place where he knew there were valiant men. And the men of the city came out and fought with Joab, and some of the servants of David among the people fell. Uriah the Hittite also died.</strong> Then Joab sent and told David all the news about the fighting. And he instructed the messenger, “When you have finished telling all the news about the fighting to the king, then, if the king's anger rises, and if he says to you, ‘Why did you go so near the city to fight? Did you not know that they would shoot from the wall? Who killed Abimelech the son of Jerubbesheth? Did not a woman cast an upper millstone on him from the wall, so that he died at Thebez? Why did you go so near the wall?’ then you shall say, ‘Your servant Uriah the Hittite is dead also.’”  So the messenger went and came and told David all that Joab had sent him to tell. The messenger said to David, “The men gained an advantage over us and came out against us in the field, but we drove them back to the entrance of the gate. Then the archers shot at your servants from the wall. Some of the king's servants are dead, and your servant Uriah the Hittite is dead also.” David said to the messenger, “Thus shall you say to Joab, ‘Do not let this matter displease you, for the sword devours now one and now another. Strengthen your attack against the city and overthrow it.’ And encourage him.” <strong>When the wife of Uriah heard that Uriah her husband was dead, she lamented over her husband. And when the mourning was over, David sent and brought her to his house, and she became his wife and bore him a son. <u>But the thing that David had done displeased the Lord.</u></strong>"
+                            },
+                             {
+                                title: "2 Samuel 12:9-11",
+                                type: "bible",
+                                text: "<strong>Why have you despised the word of the Lord, to do what is evil in his sight?</strong> You have struck down Uriah the Hittite with the sword and have taken his wife to be your wife and have killed him with the sword of the Ammonites. <strong>Now therefore the sword shall never depart from your house, because you have despised me and have taken the wife of Uriah the Hittite to be your wife.’ Thus says the Lord, ‘Behold, I will raise up evil against you out of your own house. And I will take your wives before your eyes and give them to your neighbor, and he shall lie with your wives in the sight of this sun.</strong>"
+                            },
+                            
+                             {
+                                title: "2 Samuel 12:13-18",
+                                type: "bible",
+                                text: "<strong>David said to Nathan, “I have sinned against the Lord.” And Nathan said to David, “The Lord also has put away your sin; you shall not die. Nevertheless, because by this deed you have utterly scorned the Lord, the child who is born to you shall die.”</strong> Then Nathan went to his house. And the Lord afflicted the child that Uriah's wife bore to David, and he became sick. David therefore sought God on behalf of the child. And David fasted and went in and lay all night on the ground. And the elders of his house stood beside him, to raise him from the ground, but he would not, nor did he eat food with them. <strong>On the seventh day the child died.</strong> And the servants of David were afraid to tell him that the child was dead, for they said, “Behold, while the child was yet alive, we spoke to him, and he did not listen to us. How then can we say to him the child is dead? He may do himself some harm.” "
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "So, David's lust here ultimately made him murder another man. Another reason why polygamy only does bad to men."
+                            },
+                            {
+                                type: "commentary",
+                                text: "4. Solomon's 700 Wives and 300 Concubines"
+                            },
+                            {
+                                type: "commentary",
+                                text: "Solomon married many foreign women who worshiped other gods. As a result, Solomon built altars for idols to please his wives and His heart turned away from the Lord. God then pronounced judgement:"
+                            },
+                             {
+                                title: "1 Kings 11:1-11",
+                                type: "bible",
+                                text: "<strong>Now King Solomon loved many foreign women,</strong> along with the daughter of Pharaoh: Moabite, Ammonite, Edomite, Sidonian, and Hittite women, from the nations concerning which the Lord had said to the people of Israel, “You shall not enter into marriage with them, neither shall they with you, for surely they will turn away your heart after their gods.” Solomon clung to these in love. <strong>He had 700 wives, who were princesses, and 300 concubines. <u>And his wives turned away his heart. For when Solomon was old his wives turned away his heart after other gods, and his heart was not wholly true to the Lord his God,</u> as was the heart of David his father.</strong> For Solomon went after Ashtoreth the goddess of the Sidonians, and after Milcom the abomination of the Ammonites. So Solomon did what was evil in the sight of the Lord and did not wholly follow the Lord, as David his father had done. <strong>Then Solomon built a high place for Chemosh the abomination of Moab, and for Molech the abomination of the Ammonites, on the mountain east of Jerusalem. And so he did for all his foreign wives, who made offerings and sacrificed to their gods. <u>And the Lord was angry with Solomon, because his heart had turned away from the Lord, the God of Israel, who had appeared to him twice and had commanded him concerning this thing, that he should not go after other gods. But he did not keep what the Lord commanded. Therefore the Lord said to Solomon, “Since this has been your practice and you have not kept my covenant and my statutes that I have commanded you, I will surely tear the kingdom from you and will give it to your servant.</u></strong> "
+                            },
+                            {
+                                type: "commentary",
+                                text: "And yet again, polygamy led to evil."
+                            },
+                            {
+                                type: "commentary",
+                                text: "1. The Church Fathers: Polygamy allowed?"
+                            },
+                            {
+                                type: "other",
+                                text: "Among us, however, whom the recognition of spiritual gifts entitles to be deservedly called Spiritual, continence is as religious as licence is modest; since both the one and the other are in harmony with the Creator. Continence honours the law of marriage, licence tempers it; the former is not forced, the latter is regulated; the former recognises the power of free choice, the latter recognises a limit. <strong><u>We admit one marriage, just as we do one God.</u></strong> The law of marriage reaps an accession of honour where it is associated with shamefastness. But to the Psychics, since they receive not the Spirit, the things which are the Spirit's are not pleasing. Thus, so long as the things which are the Spirit's please them not, the things which are of the flesh will please, as being the contraries of the Spirit. ",
+                                title: "Tertullian: on Monogamy",
+                                source: "https://www.newadvent.org/fathers/0406.htm"
+                            },
+                             {
+                                title: "Tertullian: On Exhortation to Chastity",
+                                type: "other",
+                                text: "<strong>There were more ribs in Adam, and hands that knew no weariness in God; <u>but not more wives in the eye of God.</u> And accordingly the man of God, Adam, and the woman of God, Eve, discharging mutually (the duties of) one marriage, sanctioned for mankind a type by (the considerations of) the authoritative precedent of their origin and the primal will of God. Finally, there shall be, <u>said He, two in one flesh, not three nor four.</u> On any other hypothesis, there would no longer be one flesh, nor two (joined) into one flesh.</strong> These will be so, if the conjunction and the growing together in unity take place once for all. If, however, (it take place) a second time, or oftener, immediately (the flesh) ceases to be one, and there will not be two (joined) into one flesh, but plainly one rib (divided) into more. But when the apostle interprets, The two shall be (joined) into one flesh of the Church and Christ, according to the spiritual nuptials of the Church and Christ (for Christ is one, and one is His Church), we are bound to recognise a duplication and additional enforcement for us of the law of unity of marriage, not only in accordance with the foundation of our race, but in accordance with the sacrament of Christ. <strong>From <u>one</u> marriage do we derive our origin in each case; carnally in Adam, spiritually in Christ. <u>The two births combine in laying down one prescriptive rule of monogamy. In regard of each of the two, is he degenerate who transgresses the limit of monogamy. Plurality of marriage began with an accursed man.</u> Lamech was the first who, by marrying himself to two women, <u>caused three to be (joined) into one flesh.</u></strong>",
+                                source: "https://www.newadvent.org/fathers/0405.htm"
+                            },
+                             {
+                                title: "St. Augustine: Of the Good of Marriage",
+                                type: "other",
+                                text: "But since out of many souls there shall be hereafter one City of such as have one soul and one heart towards God; which perfection of our unity shall be hereafter, after this sojourn in a strange land, wherein the thoughts of all shall neither be hidden one from another, nor shall be in any matter opposed one to another; <strong>on this account the Sacrament of marriage of our time has been so reduced to one man and one wife, as that it is not lawful to ordain any as a steward of the Church, save the husband of one wife.</strong>"
+                            },
+                            {
+                                type: "commentary",
+                                text: "A quick parallel to the Quran:"
+                            },
+                            {
+                                type: "quran",
+                                title: "Quran 4:3",
+                                text: "And if ye fear that ye will not deal fairly by the orphans, marry of the women, who seem good to you, <strong>two or three or four;</strong> and if ye fear that ye cannot do justice (to so many) then one (only) or (the captives) that your right hands possess. Thus it is more likely that ye will not do injustice."
+                            },
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                    "adultery": {
+                        title: "Adultery",
+                        introduction: "What counts as Adultery?",                        sources: [
+                            {
+                                type: "commentary",
+                                text: "Adultery is defined as:<br><br>-sexual relations with someone that is not your spouse<br>-lustful desire in the heart / lusting over people<br>-remarriage after divorce (except for sexual immorality)"
+                            },
+                            {
+                                type: "commentary",
+                                text: "1. Sexual relations with someone that is not your spouse"
+                            },
+                            {
+
+                                title: "Exodus 20:14",
+                                type: "bible",
+                                text: "You shall not commit adultery."
+                            },
+                            
+                            {
+                                title: "Leviticus 20:10",
+                                type: "bible",
+                                text: "If a man commits adultery with the wife of his neighbor, both the adulterer and the adulteress shall surely be put to death."
+                            },
+                            
+                            {
+                                title: "Hebrews 13:4",
+                                type: "bible",
+                                text: "Let marriage be held in honor among all, and let the marriage bed be undefiled, for God will judge the sexually immoral and adulterous."
+                            },
+                            
+                            {
+                                title: "1 Corinthians 6:13-20",
+                                type: "bible",
+                                text: "The body is not meant for sexual immorality, but for the Lord, and the Lord for the body. And God raised the Lord and will also raise us up by his power. Do you not know that your bodies are members of Christ? Shall I then take the members of Christ and make them members of a prostitute? Never! Or do you not know that he who is joined to a prostitute becomes one body with her? For, as it is written, “The two will become one flesh.” But he who is joined to the Lord becomes one spirit with him. Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body. Or do you not know that your body is a temple of the Holy Spirit within you, whom you have from God? You are not your own, for you were bought with a price. So glorify God in your body."
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "2. Lustful desire in the heart / lusting over people"
+                            },
+                            
+                            {
+                                title: "Matthew 5:27-30",
+                                type: "bible",
+                                text: "“You have heard that it was said, ‘You shall not commit adultery.’ But I say to you that everyone who looks at a woman with lustful intent has already committed adultery with her in his heart. If your right eye causes you to sin, tear it out and throw it away. For it is better that you lose one of your members than that your whole body be thrown into hell. And if your right hand causes you to sin, cut it off and throw it away. For it is better that you lose one of your members than that your whole body go into hell."
+                            },
+                            
+                            {
+                                title: "Job 31:1-4",
+                                type: "bible",
+                                text: "“I have made a covenant with my eyes; how then could I gaze at a virgin? What would be my portion from God above and my heritage from the Almighty on high? Is not calamity for the unrighteous, and disaster for the workers of iniquity? Does not he see my ways and number all my steps?"
+                            },
+
+                              {
+                                type: "commentary",
+                                text: "3. Remarriage after divorce (except for sexual immorality)"
+                            },
+                            
+                            {
+                                title: "Matthew 19:7-9",
+                                type: "bible",
+                                text: "They said to him, “Why then did Moses command one to give a certificate of divorce and to send her away?” He said to them, “Because of your hardness of heart Moses allowed you to divorce your wives, but from the beginning it was not so. And I say to you: whoever divorces his wife, except for sexual immorality, and marries another, commits adultery.”"
+                            },
+
+                            {
+                                title: "Mark 10:10-12",
+                                type: "bible",
+                                text: "And in the house the disciples asked him again about this matter. And he said to them, “Whoever divorces his wife and marries another commits adultery against her, and if she divorces her husband and marries another, she commits adultery.”"
+                            },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+                            
+                            // {
+                            //     title: "",
+                            //     type: "bible",
+                            //     text: ""
+                            // },
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                    "homosexuality": {
+                        title: "Homosexuality",
+                        introduction: "Is homosexuality a sin?",                        sources: [
+
+                            {
+
+                                title: "Leviticus 18:22",
+                                type: "bibleot",
+                                text: "“You shall not lie with a male as with a woman; it is an abomination.”"
+                            },
+                            
+                            {
+                                title: "Leviticus 20:13",
+                                type: "bibleot",
+                                text: "If a man lies with a male as with a woman, both of them have committed an abomination; they shall surely be put to death; their blood is upon them. "
+                            },
+                            
+                            {
+                                title: "Romans 1:26-27",
+                                type: "bible",
+                                text: "For this reason God gave them up to dishonorable passions. For their women exchanged natural relations for those that are contrary to nature; and the men likewise gave up natural relations with women and were consumed with passion for one another, men committing shameless acts with men and receiving in themselves the due penalty for their error."
+                            },
+                            
+                            {
+                                title: "1 Corinthians 6:9-11",
+                                type: "bible",
+                                text: "Or do you not know that the unrighteous will not inherit the kingdom of God? Do not be deceived: neither the sexually immoral, nor idolaters, nor adulterers, <strong>nor men who practice homosexuality,</strong> nor thieves, nor the greedy, nor drunkards, nor revilers, nor swindlers will inherit the kingdom of God. And such were some of you. But you were washed, you were sanctified, you were justified in the name of the Lord Jesus Christ and by the Spirit of our God."
+                            },
+                            
+                            {
+                                title: "1 Timothy 1:9-11",
+                                type: "bible",
+                                text: "understanding this, that the law is not laid down for the just but for the lawless and disobedient, for the ungodly and sinners, for the unholy and profane, for those who strike their fathers and mothers, for murderers, <strong>the sexually immoral, men who practice homosexuality,</strong> enslavers, liars, perjurers, and whatever else is contrary to sound doctrine, in accordance with the gospel of the glory of the blessed God with which I have been entrusted."
+                            },
+
+                            {
+                                type: "commentary",
+                                text: "The bible is clear: homosexuality is sinful. Now one thing must be said: people that are homosexual, i.e. feel an attraction towards the same gender, are not inherently condemned. You are not condemned by what you feel or by what you want to do, you are condemned by WHAT you do. Me for example, i wasn't born with the desire to sleep with just one woman. People are not condemned for wanting to sleep with as many women as possible by their flesh, but are condemned if they let their flesh take over and actually do it. The same thing counts for homosexuals: if you have homosexual tendencies but fight against and don't partake in such practices, you are not different than a man who feels lust towards women but fights against his flesh, seeking holiness. As you could read from the verses presented, Paul writes of 'men who PRACTICE homosexuality', not of men who simply ARE homosexual. Sex is only holy within marriage. Marriage is only defined by God as a union between a man and a woman, not a man and a man, and not a woman and a woman. Thus, homosexual sex can never be holy, and it is an abomination against God. In the same way is it an abomination for people to have sexual relations with multiple people outside of marriage."
+                            },
+                            
+                            {
+                                title: "Matthew 5:6",
+                                type: "bible",
+                                text: "Blessed are those who hunger and thirst for righteousness, for they shall be satisfied."
+                            },
+                            
+                            {
+                                title: "Matthew 16:24-26",
+                                type: "bible",
+                                text: "Then Jesus told his disciples, “If anyone would come after me, let him deny himself and take up his cross and follow me. For whoever would save his life will lose it, but whoever loses his life for my sake will find it. For what will it profit a man if he gains the whole world and forfeits his soul? Or what shall a man give in return for his soul? "
+                            },
+                            {
+                                title: "Romans 8:1-8",
+                                type: "bible",
+                                text: "There is therefore now no condemnation for those who are in Christ Jesus. For the law of the Spirit of life has set you free in Christ Jesus from the law of sin and death. For God has done what the law, weakened by the flesh, could not do. By sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh, in order that the righteous requirement of the law might be fulfilled in us, who walk not according to the flesh but according to the Spirit. For those who live according to the flesh set their minds on the things of the flesh, but those who live according to the Spirit set their minds on the things of the Spirit. For to set the mind on the flesh is death, but to set the mind on the Spirit is life and peace. For the mind that is set on the flesh is hostile to God, for it does not submit to God's law; indeed, it cannot. Those who are in the flesh cannot please God. "
+                            },
+                            {
+                                title: "Colossians 3:3-5",
+                                type: "bible",
+                                text: "Put to death therefore what is earthly in you: sexual immorality, impurity, passion, evil desire, and covetousness, which is idolatry. On account of these the wrath of God is coming. In these you too once walked, when you were living in them. But now you must put them all away: anger, wrath, malice, slander, and obscene talk from your mouth. Do not lie to one another, seeing that you have put off the old self with its practices and have put on the new self, which is being renewed in knowledge after the image of its creator."
+                            },
+                            // {
+                            //     title: "",
+                            //     type: "",
+                            //     text: ""
+                            // },
+                            // {
+                            //     title: "",
+                            //     type: "",
+                            //     text: ""
+                            // },
+                            // {
+                            //     title: "",
+                            //     type: "",
+                            //     text: ""
+                            // },
+                            // {
+                            //     title: "",
+                            //     type: "",
+                            //     text: ""
+                            // },
+
+                            // {
+                            //     title: "Sahih Muslim 146",
+                            //     text: "It is narrated on the authority of Ibn 'Umar ('Abdullah b. 'Umar) that the Messenger of Allah (ﷺ) observed: Verily Islam started as something strange and it would again revert (to its old position) of being strange just as it started, and it would recede between the two mosques just as the serpent crawls back into its hole.",
+                            //     type: "hadith",
+                            //     grading: "Sahih (Authentic)"
+                            // }
+                            // Example of how to add an image:
+                            // {
+                            //     title: "Example Image",
+                            //     text: "images/example.jpg", // Path to your local image file
+                            //     type: "image",
+                            //     size: "medium", // Options: "small" (200px), "medium" (400px), "large" (600px), "full" (100%)
+                            //     caption: "Optional caption for the image" // Optional caption
+                            // },
+                            // {
+                            //     title: "Mission Statement",
+                            //     text: "We strive to present Islamic teachings in a clear, accessible manner while maintaining the authenticity and depth of the original sources. Our content is carefully curated and reviewed to ensure accuracy and relevance.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // },
+                            // {
+                            //     title: "Our Purpose",
+                            //     text: "Whether you're seeking daily guidance, learning about Islamic principles, or exploring the rich history and culture of Islam, IslamBot is here to assist you on your journey of knowledge and spiritual growth.",
+                            //     type: "other",
+                            //     source: "https://islam.com"
+                            // }
+                        ]
+                    },
+                  
+                }
+            },
+            
+            
+
+        }
+        // Generate navigation menu
+        function generateNavigation() {
+            const navMenu = document.getElementById('nav-menu');
+            
+            Object.keys(contentDatabase).forEach((key, index) => {
+                const navItem = document.createElement('div');
+                let navClass = 'nav-item disclaimer';
+                navItem.className = navClass;
+                
+                const titleSpan = document.createElement('span');
+                titleSpan.textContent = contentDatabase[key].title;
+                
+                const arrow = document.createElement('span');
+                arrow.className = 'nav-arrow';
+                arrow.textContent = '';
+                
+                navItem.appendChild(titleSpan);
+                navItem.appendChild(arrow);
+                
+                navItem.onclick = () => toggleSubMenu(key);
+                
+                // Create sub-menu
+                let subMenuClass = 'sub-menu disclaimer';
+                const subMenu = document.createElement('div');
+                subMenu.className = subMenuClass;
+                subMenu.id = `sub-${key}`;
+
+                Object.keys(contentDatabase[key].subTopics).forEach(subKey => {
+                    let subNavClass = 'sub-nav-item disclaimer';
+                    const subNavItem = document.createElement('div');
+                    subNavItem.className = subNavClass;
+                    subNavItem.textContent = contentDatabase[key].subTopics[subKey].title;
+                    subNavItem.onclick = (e) => {
+                        e.stopPropagation();
+                        showContent(key, subKey);
+                    };
+                    subMenu.appendChild(subNavItem);
+                });
+                
+                navMenu.appendChild(navItem);
+                navMenu.appendChild(subMenu);
+            });
+        }
+
+        // Toggle sub-menu visibility
+        function toggleSubMenu(key) {
+            const subMenu = document.getElementById(`sub-${key}`);
+            const arrow = document.querySelector(`#nav-menu .nav-item:nth-child(${Object.keys(contentDatabase).indexOf(key) * 2 + 1}) .nav-arrow`);
+            
+            // Close all other sub-menus
+            document.querySelectorAll('.sub-menu').forEach(menu => {
+                if (menu.id !== `sub-${key}`) {
+                    menu.classList.remove('show');
+                }
+            });
+            document.querySelectorAll('.nav-arrow').forEach(arr => {
+                if (arr !== arrow) {
+                    arr.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current sub-menu
+            subMenu.classList.toggle('show');
+            arrow.classList.toggle('expanded');
+        }
+
+        // Generate content sections
+        function generateContentSections() {
+            const contentArea = document.getElementById('content-area');
+            
+            Object.keys(contentDatabase).forEach(key => {
+                Object.keys(contentDatabase[key].subTopics).forEach(subKey => {
+                    const section = document.createElement('div');
+                    section.id = `${key}-${subKey}`;
+                    section.className = 'content-section';
+                    section.dataset.threadId = `${key}-${subKey}`; // thread id for comments
+                    
+                    // Create title
+                    const title = document.createElement('h2');
+                    title.textContent = contentDatabase[key].subTopics[subKey].title;
+                    section.appendChild(title);
+                    
+                    // Create introduction
+                    const introduction = document.createElement('div');
+                    introduction.className = 'introduction';
+                    introduction.textContent = contentDatabase[key].subTopics[subKey].introduction;
+                    section.appendChild(introduction);
+                    
+                    // Create sources container
+                    const sourcesContainer = document.createElement('div');
+                    sourcesContainer.className = 'sources-container';
+                    
+                    // Add each source or commentary
+                    contentDatabase[key].subTopics[subKey].sources.forEach(item => {
+                        if (item.type === 'commentary') {
+                            // Create commentary element
+                            const commentary = document.createElement('div');
+                            commentary.className = 'commentary';
+                            commentary.innerHTML = parseMarkdownLinks(item.text);
+                            sourcesContainer.appendChild(commentary);
+                        } else {
+                            // Create source element
+                            const sourceItem = document.createElement('div');
+                            sourceItem.className = 'source-item';
+                            
+                            const sourceTitle = document.createElement('div');
+                            sourceTitle.className = 'source-title';
+                               
+                            // Add special styling for bible type
+                            if (item.type === 'bible') {
+                                sourceTitle.classList.add('bible');
+                            }
+                            if (item.type === 'bibleot') {
+                                sourceTitle.classList.add('bibleot');
+                            }
+                            if (item.type === 'other') {
+                                sourceTitle.classList.add('other');
+                            }
+                            // Add icon based on source type
+                            const icon = document.createElement('span');
+                            icon.className = `source-icon ${item.type}`;
+                            
+                            if (item.type === 'quran') {
+                                icon.textContent = '📖'; // Book emoji for Quran
+                            } else if (item.type === 'hadith') {
+                                icon.textContent = '📕'; // Scroll emoji for Hadith
+                            } else if (item.type === 'bible') {
+                                icon.textContent = '✝️'; // Cross emoji for Bible
+                            } else if (item.type === 'bibleot') {
+                                icon.textContent = '📘';
+                            } else if (item.type === 'image') {
+                                icon.textContent = '🖼️'; // Picture emoji for images
+                            } else if (item.type === 'other'){
+                                // If it's a social link, render with custom cards
+                                const isSocial = ['Discord','TikTok','Telegram','Twitter','Email'].includes(item.title);
+                                if (isSocial) {
+                                    // Build once per section
+                                    if (!sourcesContainer.dataset.socialBuilt) {
+                                        const socialWrap = document.createElement('div');
+                                        socialWrap.className = 'social-links';
+
+                                        const socialTitles = ['Discord','TikTok','Telegram','Twitter','Email'];
+                                        const platforms = contentDatabase[key].subTopics[subKey].sources
+                                            .filter(s => s.type === 'other' && socialTitles.includes(s.title));
+
+                                        platforms.forEach(p => {
+                                            const a = document.createElement('a');
+                                            const keyName = p.title.toLowerCase();
+                                            a.href = p.source || '#';
+                                            a.target = '_blank';
+                                            a.rel = 'noopener noreferrer';
+                                            a.className = `social-card ${keyName}${keyName==='discord' ? ' featured' : ''}`;
+
+                                            const iconSpan = document.createElement('span');
+                                            iconSpan.className = 'social-icon';
+                                            const img = document.createElement('img');
+                                            img.src = (
+                                                keyName === 'discord' ? 'discord.jpg' :
+                                                keyName === 'tiktok' ? 'tiktok.jpg' :
+                                                keyName === 'telegram' ? 'telegram.png' :
+                                                keyName === 'twitter' ? 'x.jpg' :
+                                                'gmail.png'
+                                            );
+                                            img.alt = `${p.title} icon`;
+                                            iconSpan.appendChild(img);
+
+                                            const label = document.createElement('span');
+                                            label.className = 'social-label';
+                                            label.textContent = p.title;
+
+                                            a.appendChild(iconSpan);
+                                            a.appendChild(label);
+                                              // 🔹 Custom behavior for Gmail
+                                            if (keyName === 'email') {
+                                                a.removeAttribute('href'); // remove mailto link
+                                                a.onclick = (e) => {
+                                                    e.preventDefault();
+                                                    alert("You can email me here: davxchrist333@gmail.com");
+                                                };
+                                            }
+                                            socialWrap.appendChild(a);
+                                        });
+
+                                        // Replace default source block with social cards (single block)
+                                        sourceItem.appendChild(socialWrap);
+                                        sourcesContainer.appendChild(sourceItem);
+                                        sourcesContainer.dataset.socialBuilt = '1';
+                                    }
+                                    return; // skip default rendering for social items (already handled)
+                                } else {
+                                    icon.textContent = '📙'; // Document emoji for other sources
+                                }
+                            } else {
+                                icon.textContent = '📚'
+                            }
+                            
+                            const titleText = document.createElement('a');
+                            titleText.textContent = item.title;
+                            titleText.href = generateSourceUrl(item.title, item.type, item.source);
+                            titleText.target = '_blank';
+                            titleText.style.textDecoration = 'none';
+                            titleText.style.color = 'inherit';
+                            
+                            sourceTitle.appendChild(icon);
+                            sourceTitle.appendChild(titleText);
+                            
+                            // Add grading for hadiths
+                            if (item.type === 'hadith' && item.grading) {
+                                const grading = document.createElement('div');
+                                grading.className = 'grading';
+                                grading.textContent = `Grading: ${item.grading}`;
+                                sourceTitle.appendChild(grading);
+                            }
+                            
+                            // Handle different content types
+                            if (item.type === 'image') {
+                                // Create image container
+                                const imageContainer = document.createElement('div');
+                                imageContainer.className = 'image-container';
+                                
+                                const img = document.createElement('img');
+                                img.className = 'source-image';
+                                
+                                // Add size class if specified (default to medium if not specified)
+                                const size = item.size || 'medium';
+                                img.classList.add(size);
+                                
+                                img.src = item.text; // For images, 'text' field contains the image path
+                                img.alt = item.title;
+                                
+                                imageContainer.appendChild(img);
+                                
+                                // Add caption if provided
+                                if (item.caption) {
+                                    const caption = document.createElement('div');
+                                    caption.className = 'image-caption';
+                                    caption.textContent = item.caption;
+                                    imageContainer.appendChild(caption);
+                                }
+                                
+                                sourceItem.appendChild(sourceTitle);
+                                sourceItem.appendChild(imageContainer);
+                            } else {
+                                // Regular text content
+                                const sourceText = document.createElement('div');
+                                sourceText.className = 'source-text';
+                                sourceText.innerHTML = `"${item.text}"`;
+                                
+                                sourceItem.appendChild(sourceTitle);
+                                sourceItem.appendChild(sourceText);
+                            }
+                            
+                            sourcesContainer.appendChild(sourceItem);
+                        }
+                    });
+                    
+                    section.appendChild(sourcesContainer);
+                    contentArea.appendChild(section);
+                });
+            });
+        }
+
+        // Show specific content section
+        function showContent(sectionId, subSectionId) {
+            // Hide welcome section
+            document.getElementById('welcome').style.display = 'none';
+
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show selected section
+            const targetId = `${sectionId}-${subSectionId}`;
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+
+            // Update navigation active state
+            document.querySelectorAll('.sub-nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Find and activate the clicked sub-nav item
+            const subMenu = document.getElementById(`sub-${sectionId}`);
+            if (subMenu) {
+                const subNavItems = subMenu.querySelectorAll('.sub-nav-item');
+                const subKeys = Object.keys(contentDatabase[sectionId].subTopics);
+                const targetIndex = subKeys.indexOf(subSectionId);
+                if (targetIndex >= 0 && subNavItems[targetIndex]) {
+                    subNavItems[targetIndex].classList.add('active');
+                }
+            }
+
+            // Update URL hash without triggering page reload
+            const hash = `#${sectionId}-${subSectionId}`;
+            if (window.location.hash !== hash) {
+                history.replaceState(null, null, hash);
+            }
+        }
+
+        // Supabase comments setup
+        const supabaseUrl = 'https://ydptajhdqhiwjlozqybl.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkcHRhamhkcWhpd2psb3pxeWJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4MDA2MTUsImV4cCI6MjA3MzM3NjYxNX0.F6ezrGuNC9UfAlb6I9wXgI6wuS1TJvDsC6BHrR5yCHQ';
+        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        const COMMENT_MAX_LENGTH = 1000; // max characters per comment
+
+        async function loadComments(threadId) {
+            const { data, error } = await supabaseClient
+                .from('comments')
+                .select('*')
+                .eq('thread_id', threadId)
+                .order('created_at', { ascending: true });
+            if (error) { console.error('Error loading comments', error); return []; }
+            return data || [];
+        }
+
+        async function postComment(threadId, authorName, content) {
+            const { error } = await supabaseClient
+                .from('comments')
+                .insert({ thread_id: threadId, author_name: authorName || null, content });
+            if (error) { throw error; }
+        }
+
+        // Likes functions
+        async function loadLikes(threadId) {
+            const { data, error } = await supabaseClient
+                .from('likes')
+                .select('count')
+                .eq('thread_id', threadId)
+                .single();
+            if (error && error.code !== 'PGRST116') { // PGRST116 is "not found"
+                console.error('Error loading likes', error);
+                return 0;
+            }
+            return data ? data.count : 0;
+        }
+
+        async function incrementLikes(threadId) {
+            // First, try to get current count
+            const { data: existing, error: selectError } = await supabaseClient
+                .from('likes')
+                .select('count')
+                .eq('thread_id', threadId)
+                .single();
+
+            if (selectError && selectError.code !== 'PGRST116') {
+                console.error('Error selecting likes', selectError);
+                throw selectError;
+            }
+
+            let newCount;
+            if (existing) {
+                // Update existing
+                newCount = existing.count + 1;
+                const { error } = await supabaseClient
+                    .from('likes')
+                    .update({ count: newCount })
+                    .eq('thread_id', threadId);
+                if (error) {
+                    console.error('Error updating likes', error);
+                    throw error;
+                }
+            } else {
+                // Insert new
+                newCount = 1;
+                const { error } = await supabaseClient
+                    .from('likes')
+                    .insert({ thread_id: threadId, count: newCount });
+                if (error) {
+                    console.error('Error inserting likes', error);
+                    throw error;
+                }
+            }
+            return newCount;
+        }
+
+        function createCommentElement(c) {
+            const el = document.createElement('div');
+            el.className = 'comment-item';
+            const date = c.created_at ? new Date(c.created_at) : new Date();
+            el.innerHTML = `
+                <div class="comment-header">
+                    <div class="comment-author">${(c.author_name && c.author_name.trim()) ? c.author_name.replace(/[<>]/g,'') : 'Anonymous'}</div>
+                    <div class="comment-date">${date.toLocaleString()}</div>
+                </div>
+                <div class="comment-text"></div>
+            `;
+            el.querySelector('.comment-text').textContent = c.content || '';
+            return el;
+        }
+
+        const commentsChannels = {};
+        function subscribeToThread(threadId, listEl) {
+            if (commentsChannels[threadId]) return;
+            const channel = supabaseClient.channel(`comments-${threadId}`)
+                .on('postgres_changes', {
+                    event: 'INSERT',
+                    schema: 'public',
+                    table: 'comments',
+                    filter: `thread_id=eq.${threadId}`
+                }, (payload) => {
+                    const c = payload.new;
+                    listEl.appendChild(createCommentElement(c));
+                })
+                .subscribe();
+            commentsChannels[threadId] = channel;
+        }
+
+        const likesChannels = {};
+        function subscribeToLikes(threadId, countEl) {
+            if (likesChannels[threadId]) return;
+            const channel = supabaseClient.channel(`likes-${threadId}`)
+                .on('postgres_changes', {
+                    event: '*', // Listen to all changes (INSERT, UPDATE, DELETE)
+                    schema: 'public',
+                    table: 'likes',
+                    filter: `thread_id=eq.${threadId}`
+                }, (payload) => {
+                    if (payload.new) {
+                        countEl.textContent = payload.new.count;
+                    } else if (payload.eventType === 'DELETE') {
+                        countEl.textContent = '0';
+                    }
+                })
+                .subscribe();
+            likesChannels[threadId] = channel;
+        }
+
+        function ensureCommentsUI(section) {
+            if (section.querySelector('.comments-section')) return;
+            const threadId = section.dataset.threadId || section.id;
+
+            // Add likes section
+            const likesSection = document.createElement('div');
+            likesSection.className = 'likes-section';
+            likesSection.innerHTML = `
+                <button class="like-button" title="Like this article">Like</button>
+                <span class="like-count">0</span> likes
+            `;
+            section.appendChild(likesSection);
+
+            const likeButton = likesSection.querySelector('.like-button');
+            const likeCount = likesSection.querySelector('.like-count');
+
+            // Load initial likes count
+            loadLikes(threadId).then(count => {
+                likeCount.textContent = count;
+            });
+
+            // Subscribe to real-time updates
+            subscribeToLikes(threadId, likeCount);
+
+            // Handle like button click
+            likeButton.addEventListener('click', async () => {
+                if (localStorage.getItem(`liked-${threadId}`) === 'true') {
+                    alert('You already liked this article.');
+                    return;
+                }
+
+                likeButton.disabled = true;
+                likeButton.classList.add('liked');
+
+                try {
+                    const newCount = await incrementLikes(threadId);
+                    likeCount.textContent = newCount;
+                    localStorage.setItem(`liked-${threadId}`, 'true');
+                } catch (err) {
+                    console.error('Failed to like', err);
+                    alert('Failed to like the article.');
+                    likeButton.classList.remove('liked');
+                } finally {
+                    likeButton.disabled = false;
+                }
+
+            });
+
+            const commentsSection = document.createElement('div');
+            commentsSection.className = 'comments-section';
+            commentsSection.innerHTML = `
+                <div class="comments-title">Comments</div>
+                <div class="comments-list"></div>
+                <form class="comment-form">
+                    <input type="text" class="comment-name" placeholder="Your name (optional)" />
+                    <textarea class="comment-input" rows="3" placeholder="Write a comment..." maxlength="1000"></textarea>
+                    <div class="comment-hint" style="font-size:12px;color:#888;margin:4px 0 8px;">Max 1000 characters</div>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            `;
+            section.appendChild(commentsSection);
+
+            const listEl = commentsSection.querySelector('.comments-list');
+            const form = commentsSection.querySelector('.comment-form');
+            const nameInput = commentsSection.querySelector('.comment-name');
+            const textInput = commentsSection.querySelector('.comment-input');
+
+            // Load existing
+            loadComments(threadId).then(comments => {
+                comments.forEach(c => listEl.appendChild(createCommentElement(c)));
+            });
+
+            // Realtime
+            subscribeToThread(threadId, listEl);
+
+            // Handle submit
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = nameInput.value.trim();
+                let text = textInput.value.trim();
+                if (!text) return;
+                if (text.length > COMMENT_MAX_LENGTH) {
+                    alert(`Comment is too long. Maximum is ${COMMENT_MAX_LENGTH} characters.`);
+                    return;
+                }
+                form.querySelector('.comment-submit').disabled = true;
+                try {
+                    await postComment(threadId, name, text);
+                    textInput.value = '';
+                } catch (err) {
+                    console.error('Failed to post comment', err);
+                    alert('Failed to post comment.');
+                } finally {
+                    form.querySelector('.comment-submit').disabled = false;
+                }
+            });
+        }
+
+        function initCommentsForAllSections() {
+            document.querySelectorAll('.content-section').forEach(section => ensureCommentsUI(section));
+        }
+
+        // Parse URL hash and show appropriate content
+        function handleUrlHash() {
+            const hash = window.location.hash.substring(1); // Remove the '#'
+            if (hash) {
+                const parts = hash.split('-', 2); // Split into section and subsection
+                if (parts.length === 2) {
+                    const sectionId = parts[0];
+                    const subSectionId = parts.slice(1).join('-'); // Rejoin in case subsection has dashes
+
+                    // Check if the section and subsection exist
+                    if (contentDatabase[sectionId] && contentDatabase[sectionId].subTopics[subSectionId]) {
+                        showContent(sectionId, subSectionId);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        // Handle browser back/forward navigation
+        window.addEventListener('popstate', function() {
+            handleUrlHash();
+        });
+
+        // Initialize the website
+        document.addEventListener('DOMContentLoaded', function() {
+            generateNavigation();
+            generateContentSections();
+            initCommentsForAllSections();
+
+            // Check URL hash on page load
+            handleUrlHash();
+        });
+    </script>
+</body>
+</html>
